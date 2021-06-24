@@ -1,0 +1,1016 @@
+fileFormatVersion: 2
+guid: 838b67b0fea056d479bdb8944d4a1842
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -631249682704848918
+    second: NATAKER_Stage_Objects_0
+  - first:
+      213: 1547887966159175780
+    second: NATAKER_Stage_Objects_1
+  - first:
+      213: 512390308203176303
+    second: NATAKER_Stage_Objects_2
+  - first:
+      213: 4052189394361930446
+    second: NATAKER_Stage_Objects_3
+  - first:
+      213: -2227981648632643089
+    second: NATAKER_Stage_Objects_4
+  - first:
+      213: 2854640829319591649
+    second: NATAKER_Stage_Objects_5
+  - first:
+      213: 7313324170134888523
+    second: NATAKER_Stage_Objects_6
+  - first:
+      213: 1134090314727146107
+    second: NATAKER_Stage_Objects_7
+  - first:
+      213: -3550771819539310202
+    second: NATAKER_Stage_Objects_8
+  - first:
+      213: 5408464805336349499
+    second: NATAKER_Stage_Objects_9
+  - first:
+      213: 6568357879082050086
+    second: NATAKER_Stage_Objects_10
+  - first:
+      213: -2242720947773219217
+    second: NATAKER_Stage_Objects_11
+  - first:
+      213: 3744775757147566558
+    second: NATAKER_Stage_Objects_12
+  - first:
+      213: 4017290645382745662
+    second: NATAKER_Stage_Objects_13
+  - first:
+      213: -4329344272526084227
+    second: NATAKER_Stage_Objects_14
+  - first:
+      213: -4017199555379858420
+    second: NATAKER_Stage_Objects_15
+  - first:
+      213: -5316850609146083561
+    second: NATAKER_Stage_Objects_16
+  - first:
+      213: -2955530330239167847
+    second: NATAKER_Stage_Objects_17
+  - first:
+      213: 851343421939340259
+    second: NATAKER_Stage_Objects_18
+  - first:
+      213: -361662161322626288
+    second: NATAKER_Stage_Objects_19
+  - first:
+      213: 5251635945934868021
+    second: NATAKER_Stage_Objects_20
+  - first:
+      213: -5973391020694256547
+    second: NATAKER_Stage_Objects_21
+  - first:
+      213: 4645433746803870220
+    second: NATAKER_Stage_Objects_22
+  - first:
+      213: -2248851122059783771
+    second: NATAKER_Stage_Objects_23
+  - first:
+      213: 6715116319768229795
+    second: NATAKER_Stage_Objects_24
+  - first:
+      213: 8440647103102707384
+    second: NATAKER_Stage_Objects_25
+  - first:
+      213: -9070053112360141423
+    second: NATAKER_Stage_Objects_26
+  - first:
+      213: 6729295980768065127
+    second: NATAKER_Stage_Objects_27
+  - first:
+      213: -5647785936533986089
+    second: NATAKER_Stage_Objects_28
+  - first:
+      213: -1580754183509898834
+    second: NATAKER_Stage_Objects_29
+  - first:
+      213: 6110592746171128135
+    second: NATAKER_Stage_Objects_30
+  - first:
+      213: -7356607999640642351
+    second: NATAKER_Stage_Objects_31
+  - first:
+      213: -5885795192744158732
+    second: NATAKER_Stage_Objects_32
+  - first:
+      213: -3135181045642246239
+    second: NATAKER_Stage_Objects_33
+  - first:
+      213: -264966213196740488
+    second: NATAKER_Stage_Objects_34
+  - first:
+      213: 3795445186364811776
+    second: NATAKER_Stage_Objects_35
+  - first:
+      213: 277091550168043594
+    second: NATAKER_Stage_Objects_36
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1716
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7acc112c95d37f0800000000000000
+      internalID: -631249682704848918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460050777e33b7510800000000000000
+      internalID: 1547887966159175780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61adc245406c1700800000000000000
+      internalID: 512390308203176303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec25c85e8c44c3830800000000000000
+      internalID: 4052189394361930446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe18923be7e9411e0800000000000000
+      internalID: -2227981648632643089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6bbe0b5b8bd9720800000000000000
+      internalID: 2854640829319591649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b402b28c5952e7560800000000000000
+      internalID: 7313324170134888523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c580f1291dbf00800000000000000
+      internalID: 1134090314727146107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_8
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1332
+        width: 128
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68954e9c7df19bec0800000000000000
+      internalID: -3550771819539310202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1204
+        width: 128
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b764ec51abe0b40800000000000000
+      internalID: 5408464805336349499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 972
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622e25cb0be772b50800000000000000
+      internalID: 6568357879082050086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 972
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e56a13e2140e0e0800000000000000
+      internalID: -2242720947773219217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed17640e5bd18f330800000000000000
+      internalID: 3744775757147566558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ec985be8840c730800000000000000
+      internalID: 4017290645382745662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77f5bd62541be3c0800000000000000
+      internalID: -4329344272526084227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_15
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04f9b5d94a0048c0800000000000000
+      internalID: -4017199555379858420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71747067a80c636b0800000000000000
+      internalID: -5316850609146083561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_17
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992933fd2d8dbf6d0800000000000000
+      internalID: -2955530330239167847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 844
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e35f86e45490db00800000000000000
+      internalID: 851343421939340259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_19
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 844
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0133aa13e2e1bfaf0800000000000000
+      internalID: -361662161322626288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ece17811f81e840800000000000000
+      internalID: 5251635945934868021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_21
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 692
+        width: 128
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54c20bd3804a1da0800000000000000
+      internalID: -5973391020694256547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_22
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 716
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a4bd15165e77040800000000000000
+      internalID: 4645433746803870220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_23
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 716
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a153e4c1d97ac0e0800000000000000
+      internalID: -2248851122059783771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_24
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 588
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7b631f6b2e03d50800000000000000
+      internalID: 6715116319768229795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_25
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 588
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6edded1d3332570800000000000000
+      internalID: 8440647103102707384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 460
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19df8dfdfb2b02280800000000000000
+      internalID: -9070053112360141423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_27
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 460
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766f42a8a03436d50800000000000000
+      internalID: 6729295980768065127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_28
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 486
+        width: 100
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4e17d2d980f91b0800000000000000
+      internalID: -5647785936533986089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 436
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea90eaef178001ae0800000000000000
+      internalID: -1580754183509898834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_30
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 436
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749db923abf2dc450800000000000000
+      internalID: 6110592746171128135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_31
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 332
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc5f95500418e990800000000000000
+      internalID: -7356607999640642351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_32
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 332
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f958cbd474715ea0800000000000000
+      internalID: -5885795192744158732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_33
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 204
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7c4fb23799d74d0800000000000000
+      internalID: -3135181045642246239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_34
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 204
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8788de802a6a25cf0800000000000000
+      internalID: -264966213196740488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_35
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 76
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00aadb1b9412ca430800000000000000
+      internalID: 3795445186364811776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_Stage_Objects_36
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 76
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40570afb4d68d300800000000000000
+      internalID: 277091550168043594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

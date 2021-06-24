@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: 537491b8ae8662248bcfea06d69e5eb4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1902128848788310047
+    second: NATAKER_UI_Frame_0
+  - first:
+      213: 4471582359339919416
+    second: NATAKER_UI_Frame_1
+  - first:
+      213: 5789748342144734178
+    second: NATAKER_UI_Frame_2
+  - first:
+      213: -7458561096356922506
+    second: NATAKER_UI_Frame_3
+  - first:
+      213: 8307828254792429379
+    second: NATAKER_UI_Frame_4
+  - first:
+      213: -3574292341060204640
+    second: NATAKER_UI_Frame_5
+  - first:
+      213: 926593899602477579
+    second: NATAKER_UI_Frame_6
+  - first:
+      213: 4715693059132337270
+    second: NATAKER_UI_Frame_7
+  - first:
+      213: 5134704812359056406
+    second: NATAKER_UI_Frame_8
+  - first:
+      213: 5793999431081196095
+    second: NATAKER_UI_Frame_9
+  - first:
+      213: 3661934909504294809
+    second: NATAKER_UI_Frame_10
+  - first:
+      213: 3708010908598903439
+    second: NATAKER_UI_Frame_11
+  - first:
+      213: 6965316887239207065
+    second: NATAKER_UI_Frame_12
+  - first:
+      213: -2196313316547452829
+    second: NATAKER_UI_Frame_13
+  - first:
+      213: 4404170464795865400
+    second: NATAKER_UI_Frame_14
+  - first:
+      213: -7512330282721038572
+    second: NATAKER_UI_Frame_15
+  - first:
+      213: 7210561862288521780
+    second: NATAKER_UI_Frame_16
+  - first:
+      213: 3549535154129474110
+    second: NATAKER_UI_Frame_17
+  - first:
+      213: 3904078286051361064
+    second: NATAKER_UI_Frame_18
+  - first:
+      213: 1207059974637741216
+    second: NATAKER_UI_Frame_19
+  - first:
+      213: 3895766349593046607
+    second: NATAKER_UI_Frame_20
+  - first:
+      213: 387663937818304405
+    second: NATAKER_UI_Frame_21
+  - first:
+      213: -3654276492989804562
+    second: NATAKER_UI_Frame_22
+  - first:
+      213: -1390434831443528884
+    second: NATAKER_UI_Frame_23
+  - first:
+      213: 6627099616697204095
+    second: NATAKER_UI_Frame_24
+  - first:
+      213: -4060731388742568137
+    second: NATAKER_UI_Frame_25
+  - first:
+      213: 4216319987800657114
+    second: NATAKER_UI_Frame_26
+  - first:
+      213: 4110638345833200020
+    second: NATAKER_UI_Frame_27
+  - first:
+      213: 6792429594080635897
+    second: NATAKER_UI_Frame_28
+  - first:
+      213: 1735864670705454092
+    second: NATAKER_UI_Frame_29
+  - first:
+      213: -4772918531052305121
+    second: NATAKER_UI_Frame_30
+  - first:
+      213: 5074868009154344674
+    second: NATAKER_UI_Frame_31
+  - first:
+      213: -6220003024905951085
+    second: NATAKER_UI_Frame_32
+  - first:
+      213: 1959089044436670520
+    second: NATAKER_UI_Frame_33
+  - first:
+      213: 2060302427157382780
+    second: NATAKER_UI_Frame_34
+  - first:
+      213: -1507488462857819582
+    second: NATAKER_UI_Frame_35
+  - first:
+      213: 8843479585904582782
+    second: NATAKER_UI_Frame_36
+  - first:
+      213: -5531335015536699636
+    second: NATAKER_UI_Frame_37
+  - first:
+      213: 3972298106137193433
+    second: NATAKER_UI_Frame_38
+  - first:
+      213: 3687747649001122177
+    second: NATAKER_UI_Frame_39
+  - first:
+      213: 3108347184064956905
+    second: NATAKER_UI_Frame_40
+  - first:
+      213: 4243045884733607880
+    second: NATAKER_UI_Frame_41
+  - first:
+      213: -5841866762106067895
+    second: NATAKER_UI_Frame_42
+  - first:
+      213: -2466974420103694750
+    second: NATAKER_UI_Frame_43
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NATAKER_UI_Frame_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 384
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18cc0d2c18b56a10800000000000000
+      internalID: 1902128848788310047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NATAKER_UI_Frame_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838eb50e6704e0e30800000000000000
+      internalID: 4471582359339919416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
