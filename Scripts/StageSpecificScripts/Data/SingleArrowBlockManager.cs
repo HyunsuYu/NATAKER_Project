@@ -22,7 +22,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
         private float curFlyTime;
         private bool isShot;
 
-        [SerializeField] private int arrowCount;
+        public int arrowCount;
 
         [SerializeField] private int maxFlyLength;
         [SerializeField] private float flySpeed;

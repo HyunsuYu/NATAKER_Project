@@ -1,34 +1,25 @@
 fileFormatVersion: 2
-guid: 8a40bfdd3971bd946bcf70a5ca18873e
+guid: 3e8362b71398ee34ab27297620821ac3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6097156191136294613
-    second: TATAKER_CHARACTOR_Kick_0
+      213: -6226764264574639319
+    second: NATAKER_BirdRoom_0
   - first:
-      213: 5085353730790879563
-    second: TATAKER_CHARACTOR_Kick_1
+      213: 1622280727590552645
+    second: NATAKER_BirdRoom_1
   - first:
-      213: 2583315849620583434
-    second: TATAKER_CHARACTOR_Kick_2
+      213: -7980988343072773082
+    second: NATAKER_BirdRoom_2
   - first:
-      213: -249398431741529912
-    second: TATAKER_CHARACTOR_Kick_3
+      213: 4790756022954407408
+    second: NATAKER_BirdRoom_3
   - first:
-      213: 2579982825330914086
-    second: TATAKER_CHARACTOR_Kick_4
+      213: -5314932489804955036
+    second: NATAKER_BirdRoom_4
   - first:
-      213: 5056881579366427292
-    second: TATAKER_CHARACTOR_Kick_5
-  - first:
-      213: -4792989874491481905
-    second: TATAKER_CHARACTOR_Kick_6
-  - first:
-      213: 755519406282772054
-    second: TATAKER_CHARACTOR_Kick_7
-  - first:
-      213: -168039971861827848
-    second: TATAKER_CHARACTOR_Kick_8
+      213: 4926187412366696053
+    second: NATAKER_BirdRoom_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -72,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_0
+      name: NATAKER_BirdRoom_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 63
+        y: 600
+        width: 153
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d6a0c070437d9450800000000000000
-      internalID: 6097156191136294613
+      spriteID: 923aee564e61699a0800000000000000
+      internalID: -6226764264574639319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_1
+      name: NATAKER_BirdRoom_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 80
+        x: 358
+        y: 617
+        width: 96
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b417ff8564ec29640800000000000000
-      internalID: 5085353730790879563
+      spriteID: 5444ffdf9bf738610800000000000000
+      internalID: 1622280727590552645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_2
+      name: NATAKER_BirdRoom_2
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 80
-        height: 80
+        x: 603
+        y: 600
+        width: 114
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0475470418c9d320800000000000000
-      internalID: 2583315849620583434
+      spriteID: 62c2d961365dd3190800000000000000
+      internalID: -7980988343072773082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_3
+      name: NATAKER_BirdRoom_3
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 80
-        height: 80
+        x: 864
+        y: 599
+        width: 153
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0b18c9275f98cf0800000000000000
-      internalID: -249398431741529912
+      spriteID: 0f5b2c9683f2c7240800000000000000
+      internalID: 4790756022954407408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_4
+      name: NATAKER_BirdRoom_4
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 80
-        height: 80
+        x: 329
+        y: 146
+        width: 128
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +227,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6233576d5b0fdc320800000000000000
-      internalID: 2579982825330914086
+      spriteID: 4624efb6f019d36b0800000000000000
+      internalID: -5314932489804955036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_5
+      name: NATAKER_BirdRoom_5
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 80
-        height: 80
+        x: 66
+        y: 60
+        width: 128
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,71 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9a2a510107ad2640800000000000000
-      internalID: 5056881579366427292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_6
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc024ee7a11eb7db0800000000000000
-      internalID: -4792989874491481905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_7
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65e0668a5e42c7a00800000000000000
-      internalID: 755519406282772054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TATAKER_CHARACTOR_Kick_8
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8feeb1139800badf0800000000000000
-      internalID: -168039971861827848
+      spriteID: 57e1e1bf9555d5440800000000000000
+      internalID: 4926187412366696053
       vertices: []
       indices: 
       edges: []

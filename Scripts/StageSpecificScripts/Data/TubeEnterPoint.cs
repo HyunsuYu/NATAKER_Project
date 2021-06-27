@@ -31,7 +31,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
         }
         public void OnTriggerStay2D(Collider2D other)
         {
-            if (other.tag == "Player" && tubeEnterPointPosition == playerMovement.playerPosition)
+            if (other.tag == "Player" && tubeEnterPointPosition == playerMovement.playerPosition && playerMovement.Kicking)
             {
                 if (tubeEnterPosition == TubeEnterPosition.Up && Input.GetKey(KeyCode.W))
                 {

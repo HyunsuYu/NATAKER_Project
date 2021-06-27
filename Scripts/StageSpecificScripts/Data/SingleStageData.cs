@@ -19,5 +19,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
         public int maxMoveChance;
 
         public StatueManager[] statueManagers;
+
+        public SingleTubeManager[] singleTubeManagers;
     }
 }

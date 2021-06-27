@@ -55,6 +55,8 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
         private bool tempFlag;
         private bool chainFlag, gateAppearFlag, firstRunFlag;
 
+        private bool somthingExcuted;
+
 
 
         public void Awake()
@@ -75,8 +77,10 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
         {
             if (startEvent && !scriptFinish && !optionManager.optionIsActive)
             {
-                if (Input.anyKeyDown)
+                if (Input.GetKeyDown(KeyCode.Return) && somthingExcuted == false)
                 {
+                    somthingExcuted = true;
+
                     if(curScriptIndex == 7 && chainFlag == false)
                     {
                         chainFlag = true;
@@ -198,6 +202,8 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
             {
                 text_title.text = situaition_MainStage_Scripts.titles[curScriptIndex];
                 text_mainText.text = situaition_MainStage_Scripts.mainTexts[curScriptIndex];
+
+                somthingExcuted = false;
             }
         }
         private void ScriptFinish()

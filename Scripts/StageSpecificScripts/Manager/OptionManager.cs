@@ -14,19 +14,35 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
         public bool optionIsActive;
 
+        [SerializeField] private SoundVolumeManager soundVolumeManager;
+
 
 
         public void Awake()
         {
             audioSource.volume = 0.5f;
+
+            soundVolumeManager = GameObject.FindGameObjectsWithTag("VolumeManager")[0].GetComponent<SoundVolumeManager>();
+
+            if (soundVolumeManager != null)
+            {
+                soundVolumeManager.scrollbar = scrollbar;
+
+                scrollbar.value = soundVolumeManager.value;
+                SoundChange();
+            }
         }
         public void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if(Input.GetKeyDown(KeyCode.Escape) && optionIsActive == false)
             {
                 optionPanel.SetActive(true);
 
                 optionIsActive = true;
+            }
+            else if(Input.GetKeyDown(KeyCode.Escape) && optionIsActive == true)
+            {
+                OptionPanelOff();
             }
         }
         public void GameQuit()

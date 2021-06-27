@@ -16,7 +16,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
         {
             if(other.tag == "Player")
             {
-                playerStatus.moveChance--;
+                playerStatus.moveChance -= 3;
                 playerStatus.UpdateMoveChance();
             }
         }

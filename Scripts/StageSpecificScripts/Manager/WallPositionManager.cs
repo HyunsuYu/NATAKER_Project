@@ -43,6 +43,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         public bool[,] WallPosition
         {
             get => wallPosition;
+            set => wallPosition = value;
         }
         public Vector2Int Origin
         {

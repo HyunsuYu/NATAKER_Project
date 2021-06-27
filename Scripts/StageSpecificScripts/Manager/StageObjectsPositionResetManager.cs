@@ -15,6 +15,8 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         [SerializeField] private SingleStageData singleStageData;
 
         [SerializeField] private Transform[] arrowPositions;
+        [SerializeField] private SingleArrowBlockManager[] arrowBlockManagers;
+
         [SerializeField] private Transform[] rockPositions;
 
         [SerializeField] private RockPositionManager rockPositionManager;
@@ -38,12 +40,16 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         {
             foreach(var temp in arrowPositions)
             {
-                temp.position = new Vector3()
+                temp.localPosition = new Vector3()
                 {
                     x = 0.0f,
                     y = 0.0f,
                     z = 0.0f
                 };
+            }
+            foreach (var temp in arrowBlockManagers)
+            {
+                temp.arrowCount = 3;
             }
 
             for (int index = 0; index < rockBasePositions.Length; index++)

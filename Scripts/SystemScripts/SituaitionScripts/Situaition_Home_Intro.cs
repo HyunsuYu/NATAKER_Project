@@ -21,9 +21,7 @@ public sealed class Situaition_Home_Intro : MonoBehaviour
     [SerializeField] private SpriteRenderer darkNanayangSpriteRenderer;
     [SerializeField] private Animator darkNanayangAnimator;
 
-    [SerializeField] private SpriteRenderer ttuttiSpriteRenderer;
-    [SerializeField] private SpriteRenderer temtemSpriteRenderer;
-    [SerializeField] private SpriteRenderer chunyangSpriteRenderer;
+    [SerializeField] private SpriteRenderer[] charactorsSpriteRenderers;
 
     private bool backGroundFinish;
     private bool potalFinish_Appear;
@@ -49,6 +47,7 @@ public sealed class Situaition_Home_Intro : MonoBehaviour
     [SerializeField] private int curScriptIndex;
 
     public bool eventEnd;
+    [SerializeField] private bool somthingExcuted;
 
 
 
@@ -98,9 +97,11 @@ public sealed class Situaition_Home_Intro : MonoBehaviour
             }
             else
             {
-                if (Input.anyKeyDown)
+                if (Input.GetKeyDown(KeyCode.Return) && somthingExcuted == false)
                 {
-                    if(curScriptIndex == 4 && backGroundFinish == false)
+                    somthingExcuted = true;
+
+                    if (curScriptIndex == 4 && backGroundFinish == false)
                     {
                         tempFlag = true;
                     }
@@ -221,54 +222,32 @@ public sealed class Situaition_Home_Intro : MonoBehaviour
                 }
                 else if(tempFlag && curScriptIndex == 11)
                 {
-                    float tempA = temtemSpriteRenderer.color.a;
-                    ttuttiSpriteRenderer.color = new Color()
+                    float tempA = charactorsSpriteRenderers[0].color.a;
+                    foreach(var renderer in charactorsSpriteRenderers)
                     {
-                        r = 1.0f,
-                        g = 1.0f,
-                        b = 1.0f,
-                        a = tempA + Time.deltaTime
-                    };
-                    temtemSpriteRenderer.color = new Color()
-                    {
-                        r = 1.0f,
-                        g = 1.0f,
-                        b = 1.0f,
-                        a = tempA + Time.deltaTime
-                    };
-                    chunyangSpriteRenderer.color = new Color()
-                    {
-                        r = 1.0f,
-                        g = 1.0f,
-                        b = 1.0f,
-                        a = tempA + Time.deltaTime
-                    };
+                        renderer.color = new Color()
+                        {
+                            r = 1.0f,
+                            g = 1.0f,
+                            b = 1.0f,
+                            a = tempA + Time.deltaTime
+                        };
+                    }
 
-                    if (temtemSpriteRenderer.color.a >= 0.95f)
+                    if (charactorsSpriteRenderers[0].color.a >= 0.95f)
                     {
                         tempFlag = false;
 
-                        ttuttiSpriteRenderer.color = new Color()
+                        foreach(var renderer in charactorsSpriteRenderers)
                         {
-                            r = 1.0f,
-                            g = 1.0f,
-                            b = 1.0f,
-                            a = 1.0f
-                        };
-                        temtemSpriteRenderer.color = new Color()
-                        {
-                            r = 1.0f,
-                            g = 1.0f,
-                            b = 1.0f,
-                            a = 1.0f
-                        };
-                        chunyangSpriteRenderer.color = new Color()
-                        {
-                            r = 1.0f,
-                            g = 1.0f,
-                            b = 1.0f,
-                            a = 1.0f
-                        };
+                            renderer.color = new Color()
+                            {
+                                r = 1.0f,
+                                g = 1.0f,
+                                b = 1.0f,
+                                a = 1.0f
+                            };
+                        }
 
                         curScriptIndex++;
 
@@ -285,36 +264,26 @@ public sealed class Situaition_Home_Intro : MonoBehaviour
                         b = 1.0f,
                         a = tempA - Time.deltaTime
                     };
-                    ttuttiSpriteRenderer.color = new Color()
+                    foreach (var renderer in charactorsSpriteRenderers)
                     {
-                        r = 1.0f,
-                        g = 1.0f,
-                        b = 1.0f,
-                        a = tempA - Time.deltaTime
-                    };
-                    temtemSpriteRenderer.color = new Color()
-                    {
-                        r = 1.0f,
-                        g = 1.0f,
-                        b = 1.0f,
-                        a = tempA - Time.deltaTime
-                    };
-                    chunyangSpriteRenderer.color = new Color()
-                    {
-                        r = 1.0f,
-                        g = 1.0f,
-                        b = 1.0f,
-                        a = tempA - Time.deltaTime
-                    };
+                        renderer.color = new Color()
+                        {
+                            r = 1.0f,
+                            g = 1.0f,
+                            b = 1.0f,
+                            a = tempA - Time.deltaTime
+                        };
+                    }
 
                     if (darkNanayangSpriteRenderer.color.a <= 0.05f)
                     {
                         tempFlag = false;
 
                         darkNanayangSpriteRenderer.enabled = false;
-                        ttuttiSpriteRenderer.enabled = false;
-                        temtemSpriteRenderer.enabled = false;
-                        chunyangSpriteRenderer.enabled = false;
+                        foreach(var renderer in charactorsSpriteRenderers)
+                        {
+                            renderer.enabled = false;
+                        }
 
                         curScriptIndex++;
 
@@ -403,6 +372,8 @@ public sealed class Situaition_Home_Intro : MonoBehaviour
                 renderer.sprite = null;
             }
         }
+
+        somthingExcuted = false;
     }
     private void ScriptFinish()
     {

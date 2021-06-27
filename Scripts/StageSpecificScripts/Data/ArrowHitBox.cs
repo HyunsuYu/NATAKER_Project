@@ -18,7 +18,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
             switch(other.tag)
             {
                 case "Player":
-                    playerStatus.moveChance--;
+                    playerStatus.moveChance -= 3;
                     playerStatus.UpdateMoveChance();
                     break;
 

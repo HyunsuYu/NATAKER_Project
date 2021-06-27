@@ -12,6 +12,8 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 {
     public sealed class StageManager : MonoBehaviour
     {
+        [SerializeField] private Image backGroundImage;
+
         [SerializeField] private PlayerMovement_Stage playerMovement;
         [SerializeField] private Transform playerTranstorm;
 
@@ -38,6 +40,10 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         [SerializeField] private Text stageNum;
 
         private bool finish, tempFlag;
+        private bool stageisChanging;
+
+        public bool die;
+        private bool cloudAppear;
 
 
 
@@ -49,9 +55,9 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
             playerMovement.stageData = singleStageDatas[curStageIndex];
         }
-        public void FixedUpdate()
+        public void Update()
         {
-            if(finish == false)
+            if (finish == false && die == false)
             {
                 if (cloudMove)
                 {
@@ -63,6 +69,8 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                         cloudMove = false;
 
                         cloudRectTransform.anchoredPosition = basePosition;
+
+                        stageisChanging = false;
                     }
                 }
                 else
@@ -81,6 +89,8 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     //  Go to next stage
                     if (!flag)
                     {
+                        stageisChanging = true;
+
                         cloud.SetActive(true);
                         cloudMove = true;
 
@@ -101,13 +111,6 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                             //situaition_MainStage_Exit.Awake();
                         }
                     }
-
-
-                    //  Move chance check
-                    if (playerStatus.moveChance <= 0)
-                    {
-                        Restart();
-                    }
                 }
             }
             else if(finish && tempFlag == false)
@@ -123,6 +126,65 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
                     tempFlag = true;
                 }
+            }
+
+            if (playerStatus.moveChance <= 0 && cloudMove == false)
+            {
+                Invoke("Temp", 1.0f);
+            }
+
+            if (die)
+            {
+                if(cloudAppear == false)
+                {
+                    float tempA = backGroundImage.color.a;
+                    backGroundImage.color = new Color()
+                    {
+                        r = 1.0f,
+                        g = 1.0f,
+                        b = 1.0f,
+                        a = tempA + Time.deltaTime * 2.0f
+                    };
+
+                    if (backGroundImage.color.a >= 0.95f)
+                    {
+                        backGroundImage.color = new Color()
+                        {
+                            r = 1.0f,
+                            g = 1.0f,
+                            b = 1.0f,
+                            a = 1.0f
+                        };
+
+                        cloudAppear = true;
+                    }
+                }
+                else
+                {
+                    float tempA = backGroundImage.color.a;
+                    backGroundImage.color = new Color()
+                    {
+                        r = 1.0f,
+                        g = 1.0f,
+                        b = 1.0f,
+                        a = tempA - Time.deltaTime / 3.0f
+                    };
+
+                    if (backGroundImage.color.a <= 0.05f)
+                    {
+                        backGroundImage.color = new Color()
+                        {
+                            r = 1.0f,
+                            g = 1.0f,
+                            b = 1.0f,
+                            a = 0.0f
+                        };
+
+                        cloudAppear = false;
+                        die = false;
+                    }
+                }
+                
             }
         }
 
@@ -142,15 +204,33 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
             playerMovement.stageData = singleStageDatas[curStageIndex];
 
+            playerMovement.singleTubeManagers = singleStageDatas[curStageIndex].singleTubeManagers;
+
             stageNum.text = (curStageIndex + 1).ToString();
+
+            foreach (var temp in singleStageDatas[curStageIndex].statueManagers)
+            {
+                temp.active = false;
+                temp.light2D.enabled = false;
+            }
         }
         private void GoLastStage()
         {
             exitScriptGameObject.SetActive(true);
             lastStageObject.SetActive(true);
         }
+        private void Temp()
+        {
+            Restart();
+        }
 
         public void Restart()
+        {
+            die = true;
+
+            Invoke("ResetAll", 0.5f);   
+        }
+        private void ResetAll()
         {
             // Restart
             playerMovement.playerPosition = singleStageDatas[curStageIndex].startPosition;

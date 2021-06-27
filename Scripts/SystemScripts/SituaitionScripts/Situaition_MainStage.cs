@@ -26,6 +26,7 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
         public bool eventEnd;
 
         private bool tempFlag;
+        private bool somthingExcuted;
 
 
 
@@ -39,8 +40,10 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
         {
             if (!scriptFinish && !optionManager.optionIsActive)
             {
-                if (Input.anyKeyDown)
+                if (Input.GetKeyDown(KeyCode.Return) && somthingExcuted == false)
                 {
+                    somthingExcuted = true;
+
                     curScriptIndex++;
 
                     UpdatScriptState();
@@ -91,6 +94,8 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
 
             text_title.text = situaition_MainStage_Scripts.titles[curScriptIndex];
             text_mainText.text = situaition_MainStage_Scripts.mainTexts[curScriptIndex];
+
+            somthingExcuted = false;
         }
         private void ScriptFinish()
         {

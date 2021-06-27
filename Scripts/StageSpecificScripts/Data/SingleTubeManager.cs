@@ -23,10 +23,12 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
         [SerializeField] private float speed;
         private int curwayPointIndex;
-        [SerializeField] private bool enter;
-        [SerializeField] private bool arrive;
+        [SerializeField] public bool enter;
+        [SerializeField] public bool arrive;
 
         [SerializeField] private SingleStageData stageData;
+
+        public bool isExcuted;
 
 
         public void FixedUpdate()

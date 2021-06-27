@@ -23,9 +23,13 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
         public Vector2Int playerPosition;
 
-        private KeyCode curKeyCode;
+        [SerializeField] private KeyCode curKeyCode;
 
         public OptionManager optionManager;
+
+        [SerializeField] private AudioSource playerAudioSource;
+        [SerializeField] private AudioClip kickaudioClip;
+        [SerializeField] private AudioClip dashAudioClip;
 
 
 
@@ -41,7 +45,7 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
         }
         public void Update()
         {
-            if(eventManager.eventEnd && !optionManager.optionIsActive)
+            if((eventManager == null ? true : eventManager.eventEnd) && !optionManager.optionIsActive)
             {
                 if (moving == false && kicking == false && Input.GetKeyDown(KeyCode.W))
                 {
@@ -87,6 +91,8 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
                     if (moving)
                     {
+                        curKeyCode = KeyCode.W;
+
                         playerPosition.y += 1;
 
                         childPlayerAnimator.SetBool("Go", true);
@@ -148,6 +154,8 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
                     if (moving)
                     {
+                        curKeyCode = KeyCode.S;
+
                         playerPosition.y -= 1;
 
                         childPlayerAnimator.SetBool("Go", true);
@@ -178,6 +186,8 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
                     if (moving)
                     {
+                        curKeyCode = KeyCode.D;
+
                         playerPosition.x += 1;
 
                         childPlayerAnimator.SetBool("Go", true);
@@ -193,6 +203,8 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         curKeyCode = KeyCode.D;
                          
                         childPlayerAnimator.SetBool("Kick", true);
+
+                        childPlayerAnimator.SetBool("ToRight", true);
                         //childPlayerAnimator.SetBool("Up", true);
                         //childPlayerAnimator.Play("KickUp");
                         Invoke("KickCallBack", animationLength);
@@ -211,6 +223,8 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
                     if (moving)
                     {
+                        curKeyCode = KeyCode.A;
+
                         playerPosition.x -= 1;
 
                         childPlayerAnimator.SetBool("Go", true);
@@ -226,10 +240,23 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         curKeyCode = KeyCode.A;
 
                         childPlayerAnimator.SetBool("Kick", true);
+
+                        childPlayerAnimator.SetBool("ToRight", false);
                         //childPlayerAnimator.SetBool("Up", true);
                         //childPlayerAnimator.Play("KickUp");
                         Invoke("KickCallBack", animationLength);
                     }
+                }
+
+                if (Kicking)
+                {
+                    playerAudioSource.clip = kickaudioClip;
+                    playerAudioSource.Play();
+                }
+                else if(Moving)
+                {
+                    playerAudioSource.clip = dashAudioClip;
+                    playerAudioSource.Play();
                 }
             }
         }
@@ -270,6 +297,8 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
             curKeyCode = KeyCode.None;
 
+            playerAudioSource.clip = null;
+
             kicking = false;
         }
 
@@ -278,7 +307,11 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
             childPlayerAnimator.SetBool("Go", false);
             childPlayerAnimator.SetBool("Up", false);
 
+            playerAudioSource.clip = null;
+
             moving = false;
+
+            curKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoUp", false);
         }
@@ -287,7 +320,11 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
             childPlayerAnimator.SetBool("Go", false);
             childPlayerAnimator.SetBool("Down", false);
 
+            playerAudioSource.clip = null;
+
             moving = false;
+
+            curKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoDown", false);
         }
@@ -296,7 +333,11 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
             childPlayerAnimator.SetBool("Go", false);
             childPlayerAnimator.SetBool("Right", false);
 
+            playerAudioSource.clip = null;
+
             moving = false;
+
+            curKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoRight", false);
         }
@@ -305,7 +346,11 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
             childPlayerAnimator.SetBool("Go", false);
             childPlayerAnimator.SetBool("Left", false);
 
+            playerAudioSource.clip = null;
+
             moving = false;
+
+            curKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoLeft", false);
         }
