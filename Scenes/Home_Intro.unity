@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -166,7 +166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1701267216}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &19066441
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,7 +4258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &381106772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4539,13 +4537,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childPlayerAnimator: {fileID: 911745194}
-  wallPositionManager: {fileID: 0}
-  totalDoorManager: {fileID: 0}
-  animationSpeed: 4
+  animationSpeed: 3.5
   animationLength: 0
   eventManager: {fileID: 875395952}
-  playerPosition: {x: 14, y: 2}
-  curKeyCode: 0
   optionManager: {fileID: 1818703240}
   playerAudioSource: {fileID: 911745198}
   kickaudioClip: {fileID: 8300000, guid: 4a07c516e0d18d942b6f50b9ff53644a, type: 3}
@@ -4789,7 +4783,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 268001846}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &469253406
 GameObject:
   m_ObjectHideFlags: 0
@@ -7600,7 +7593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &940947812
 GameObject:
   m_ObjectHideFlags: 0
@@ -9428,7 +9420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &1171649743
 GameObject:
   m_ObjectHideFlags: 0
@@ -10257,7 +10248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f4dd0f03db4864d94024a45c911253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0.5
   scrollbar: {fileID: 0}
 --- !u!4 &1434892985
 Transform:
@@ -13183,7 +13173,6 @@ MonoBehaviour:
   optionPanel: {fileID: 1346527458}
   audioSource: {fileID: 911745198}
   scrollbar: {fileID: 1490369328}
-  optionIsActive: 0
   soundVolumeManager: {fileID: 1434892984}
 --- !u!4 &1818703241
 Transform:
@@ -14029,7 +14018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &1996881822
 GameObject:
   m_ObjectHideFlags: 0
@@ -15500,7 +15488,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2002966577}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &2041345365
 GameObject:
   m_ObjectHideFlags: 0

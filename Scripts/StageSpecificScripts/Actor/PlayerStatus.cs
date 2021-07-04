@@ -7,19 +7,19 @@ namespace Assets.Scripts.StageSpecificScripts.Actor
 {
     public sealed class PlayerStatus : MonoBehaviour
     {
-        public int moveChance;
+        public int MoveChance { get; set; }
 
-        [SerializeField] Text leftMoveChance;
+        [SerializeField] private Text leftMoveChance;
 
 
 
         public void Awake()
         {
-            leftMoveChance.text = moveChance.ToString();
+            leftMoveChance.text = MoveChance.ToString();
         }
         public void UpdateMoveChance()
         {
-            leftMoveChance.text = moveChance.ToString();
+            leftMoveChance.text = MoveChance.ToString();
         }
     }
 }

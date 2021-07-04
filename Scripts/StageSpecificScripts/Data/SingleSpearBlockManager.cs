@@ -148,9 +148,9 @@ namespace Assets.Scripts.StageSpecificScripts.Data
                     break;
             }
 
-            Invoke("GetDelay", 0.5f);
+            Invoke("GetDelayedCallBack", 0.5f);
         }
-        private void GetDelay()
+        private void GetDelayedCallBack()
         {
             isAttacking = false;
         }

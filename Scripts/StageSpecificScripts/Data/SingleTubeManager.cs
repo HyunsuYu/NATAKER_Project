@@ -23,19 +23,19 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
         [SerializeField] private float speed;
         private int curwayPointIndex;
-        [SerializeField] public bool enter;
-        [SerializeField] public bool arrive;
+
+        public bool Enter { get; private set; }
+        public bool Arrive { get; private set; }
 
         [SerializeField] private SingleStageData stageData;
 
-        public bool isExcuted;
 
 
         public void FixedUpdate()
         {
-            if (arrive == false && tubeEnterPoints[0].active && !tubeEnterPoints[1].active)
+            if (Arrive == false && tubeEnterPoints[0].Active && !tubeEnterPoints[1].Active)
             {
-                if (!enter)
+                if (!Enter)
                 {
                     curwayPointIndex = 0;
                     tubeEnterPosition = TubeEnterPosition.Up;
@@ -43,7 +43,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
                     boxCollider.enabled = false;
                     playerSpriteRenderer.enabled = false;
                 }
-                enter = true;
+                Enter = true;
 
                 float step = Time.deltaTime * speed;
 
@@ -56,7 +56,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
                     curwayPointIndex++;
 
-                    arrive = true;
+                    Arrive = true;
                 }
                 else if (Vector3.Distance(wayPointPositions[curwayPointIndex], playerTransform.position) <= 0.2f)
                 {
@@ -65,9 +65,9 @@ namespace Assets.Scripts.StageSpecificScripts.Data
                     curwayPointIndex++;
                 }
             }
-            else if (arrive == false && !tubeEnterPoints[0].active && tubeEnterPoints[1].active)
+            else if (Arrive == false && !tubeEnterPoints[0].Active && tubeEnterPoints[1].Active)
             {
-                if (!enter)
+                if (!Enter)
                 {
                     curwayPointIndex = wayPointPositions.Length - 1;
                     tubeEnterPosition = TubeEnterPosition.Down;
@@ -75,7 +75,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
                     boxCollider.enabled = false;
                     playerSpriteRenderer.enabled = false;
                 }
-                enter = true;
+                Enter = true;
 
                 float step = Time.deltaTime * speed;
 
@@ -87,7 +87,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
                     curwayPointIndex--;
 
-                    arrive = true;
+                    Arrive = true;
                 }
                 else if (Vector3.Distance(wayPointPositions[curwayPointIndex], playerTransform.position) <= 0.2f)
                 {
@@ -97,13 +97,13 @@ namespace Assets.Scripts.StageSpecificScripts.Data
                 }
             }
 
-            if (arrive)
+            if (Arrive)
             {
-                enter = false;
-                arrive = false;
+                Enter = false;
+                Arrive = false;
 
-                tubeEnterPoints[0].active = false;
-                tubeEnterPoints[1].active = false;
+                tubeEnterPoints[0].Active = false;
+                tubeEnterPoints[1].Active = false;
 
 
                 bool flag = default(bool);
@@ -133,11 +133,11 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
                         if(flag)
                         {
-                            tubeEnterPoints[1].active = true;
+                            tubeEnterPoints[1].Active = true;
                         }
                         else
                         {
-                            playerMovement.playerPosition = tempPosition;
+                            playerMovement.PlayerPosition = tempPosition;
                         }
                         break;
 
@@ -161,11 +161,11 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
                         if (flag)
                         {
-                            tubeEnterPoints[0].active = true;
+                            tubeEnterPoints[0].Active = true;
                         }
                         else
                         {
-                            playerMovement.playerPosition = tempPosition;
+                            playerMovement.PlayerPosition = tempPosition;
                         }
                         break;
                 }

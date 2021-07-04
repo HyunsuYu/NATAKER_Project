@@ -38,7 +38,7 @@ namespace Assets.Scripts.SystemScripts.SituaitionScripts
         }
         public void Update()
         {
-            if (!scriptFinish && !optionManager.optionIsActive)
+            if (!scriptFinish && !optionManager.OptionIsActive)
             {
                 if (Input.GetKeyDown(KeyCode.Return) && somthingExcuted == false)
                 {

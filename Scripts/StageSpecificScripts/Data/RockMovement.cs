@@ -4,165 +4,181 @@ using NATAKER_DLL.StageSpecific.Home.Actor;
 using Assets.Scripts.StageSpecificScripts.Manager;
 
 
-public class RockMovement : MonoBehaviour
+
+namespace Assets.Scripts.StageSpecificScripts.Data
 {
-    private Animator animator;
-    [SerializeField] private PlayerMovement_Stage playerMovement;
-
-    [SerializeField] private RockPositionManager rockPositionManager;
-    [SerializeField] private WallPositionManager wallPositionManager;
-
-    [SerializeField] private Vector2Int rockPositoon;
-    [SerializeField] private int index;
-    [SerializeField] private bool move;
-
-    private KeyCode prevKeyCode;
-    private float callBackTime;
-
-
-
-    public void Awake()
+    public class RockMovement : MonoBehaviour
     {
-        animator = GetComponent<Animator>();
+        private Animator animator;
 
-        callBackTime = animator.runtimeAnimatorController.animationClips[0].length / 2.0f;
-    }
+        [SerializeField] private PlayerMovement_Stage playerMovement;
 
-    public void OnTriggerStay2D(Collider2D other)
-    {
-        if (playerMovement.Kicking)
+        [SerializeField] private RockPositionManager rockPositionManager;
+        [SerializeField] private WallPositionManager wallPositionManager;
+
+        public Vector2Int RockPositoon { get; set; }
+        public int Index { get; set; }
+
+        private bool move;
+
+        private float callBackTime;
+
+
+
+        public void Awake()
         {
-            switch (playerMovement.CurKeyCode)
+            animator = GetComponent<Animator>();
+
+            callBackTime = animator.runtimeAnimatorController.animationClips[0].length / 2.0f;
+        }
+
+        public void OnTriggerStay2D(Collider2D other)
+        {
+            if (playerMovement.Kicking)
             {
-                case KeyCode.W:
-                    if (!(rockPositoon.y == playerMovement.PlayerPosition.y + 1 && rockPositoon.x == playerMovement.PlayerPosition.x) || !(wallPositionManager.WallPosition[rockPositoon.y + 1 - wallPositionManager.Origin.y, rockPositoon.x - wallPositionManager.Origin.x]))
-                    {
-                        break;
-                    }
-
-                    foreach (Vector2Int coord in rockPositionManager.RockPositions)
-                    {
-                        if (rockPositoon.x == coord.x && rockPositoon.y + 1 == coord.y)
+                switch (playerMovement.CurKeyCode)
+                {
+                    case KeyCode.W:
+                        if (!(RockPositoon.y == playerMovement.PlayerPosition.y + 1 && RockPositoon.x == playerMovement.PlayerPosition.x) || !(wallPositionManager.WallPosition[RockPositoon.y + 1 - wallPositionManager.Origin.y, RockPositoon.x - wallPositionManager.Origin.x]))
                         {
-                            move = false;
                             break;
                         }
-                    }
 
-                    if (move)
-                    {
-                        rockPositoon.y += 1;
-                        rockPositionManager.RockPositions[index].y += 1;
-                        animator.SetBool("Up", true);
-
-                        Invoke("AnimationCallBack", callBackTime);
-
-                        move = false;
-                    }
-                    break;
-
-                case KeyCode.S:
-                    if (!(rockPositoon.y == playerMovement.PlayerPosition.y - 1 && rockPositoon.x == playerMovement.PlayerPosition.x) || !(wallPositionManager.WallPosition[rockPositoon.y - 1 - wallPositionManager.Origin.y, rockPositoon.x - wallPositionManager.Origin.x]))
-                    {
-                        break;
-                    }
-
-                    foreach (Vector2Int coord in rockPositionManager.RockPositions)
-                    {
-                        if (rockPositoon.x == coord.x && rockPositoon.y - 1 == coord.y)
+                        foreach (Vector2Int coord in rockPositionManager.RockPositions)
                         {
+                            if (RockPositoon.x == coord.x && RockPositoon.y + 1 == coord.y)
+                            {
+                                move = false;
+                                break;
+                            }
+                        }
+
+                        if (move)
+                        {
+                            RockPositoon = new Vector2Int()
+                            {
+                                x = RockPositoon.x,
+                                y = RockPositoon.y + 1
+                            };
+
+                            rockPositionManager.RockPositions[Index].y += 1;
+                            animator.SetBool("Up", true);
+
+                            Invoke("AnimationCallBack", callBackTime);
+
                             move = false;
+                        }
+                        break;
+
+                    case KeyCode.S:
+                        if (!(RockPositoon.y == playerMovement.PlayerPosition.y - 1 && RockPositoon.x == playerMovement.PlayerPosition.x) || !(wallPositionManager.WallPosition[RockPositoon.y - 1 - wallPositionManager.Origin.y, RockPositoon.x - wallPositionManager.Origin.x]))
+                        {
                             break;
                         }
-                    }
 
-                    if (move)
-                    {
-                        rockPositoon.y -= 1;
-                        rockPositionManager.RockPositions[index].y -= 1;
-                        animator.SetBool("Down", true);
-
-                        Invoke("AnimationCallBack", callBackTime);
-
-                        move = false;
-                    }
-                    break;
-
-                case KeyCode.A:
-                    if (!(rockPositoon.y == playerMovement.PlayerPosition.y && rockPositoon.x == playerMovement.PlayerPosition.x - 1) || !(wallPositionManager.WallPosition[rockPositoon.y - wallPositionManager.Origin.y, rockPositoon.x - 1 - wallPositionManager.Origin.x]))
-                    {
-                        break;
-                    }
-
-                    foreach (Vector2Int coord in rockPositionManager.RockPositions)
-                    {
-                        if (rockPositoon.x - 1 == coord.x && rockPositoon.y == coord.y)
+                        foreach (Vector2Int coord in rockPositionManager.RockPositions)
                         {
+                            if (RockPositoon.x == coord.x && RockPositoon.y - 1 == coord.y)
+                            {
+                                move = false;
+                                break;
+                            }
+                        }
+
+                        if (move)
+                        {
+                            RockPositoon = new Vector2Int()
+                            {
+                                x = RockPositoon.x,
+                                y = RockPositoon.y - 1
+                            };
+
+                            rockPositionManager.RockPositions[Index].y -= 1;
+                            animator.SetBool("Down", true);
+
+                            Invoke("AnimationCallBack", callBackTime);
+
                             move = false;
+                        }
+                        break;
+
+                    case KeyCode.A:
+                        if (!(RockPositoon.y == playerMovement.PlayerPosition.y && RockPositoon.x == playerMovement.PlayerPosition.x - 1) || !(wallPositionManager.WallPosition[RockPositoon.y - wallPositionManager.Origin.y, RockPositoon.x - 1 - wallPositionManager.Origin.x]))
+                        {
                             break;
                         }
-                    }
 
-                    if (move)
-                    {
-                        rockPositoon.x -= 1;
-                        rockPositionManager.RockPositions[index].x -= 1;
-                        animator.SetBool("Left", true);
-
-                        Invoke("AnimationCallBack", callBackTime);
-
-                        move = false;
-                    }
-                    break;
-
-                case KeyCode.D:
-                    if (!(rockPositoon.y == playerMovement.PlayerPosition.y && rockPositoon.x == playerMovement.PlayerPosition.x + 1) || !(wallPositionManager.WallPosition[rockPositoon.y - wallPositionManager.Origin.y, rockPositoon.x + 1 - wallPositionManager.Origin.x]))
-                    {
-                        break;
-                    }
-
-                    foreach (Vector2Int coord in rockPositionManager.RockPositions)
-                    {
-                        if (rockPositoon.x + 1 == coord.x && rockPositoon.y == coord.y)
+                        foreach (Vector2Int coord in rockPositionManager.RockPositions)
                         {
+                            if (RockPositoon.x - 1 == coord.x && RockPositoon.y == coord.y)
+                            {
+                                move = false;
+                                break;
+                            }
+                        }
+
+                        if (move)
+                        {
+                            RockPositoon = new Vector2Int()
+                            {
+                                x = RockPositoon.x - 1,
+                                y = RockPositoon.y
+                            };
+
+                            rockPositionManager.RockPositions[Index].x -= 1;
+                            animator.SetBool("Left", true);
+
+                            Invoke("AnimationCallBack", callBackTime);
+
                             move = false;
+                        }
+                        break;
+
+                    case KeyCode.D:
+                        if (!(RockPositoon.y == playerMovement.PlayerPosition.y && RockPositoon.x == playerMovement.PlayerPosition.x + 1) || !(wallPositionManager.WallPosition[RockPositoon.y - wallPositionManager.Origin.y, RockPositoon.x + 1 - wallPositionManager.Origin.x]))
+                        {
                             break;
                         }
-                    }
 
-                    if (move)
-                    {
-                        rockPositoon.x += 1;
-                        rockPositionManager.RockPositions[index].x += 1;
-                        animator.SetBool("Right", true);
+                        foreach (Vector2Int coord in rockPositionManager.RockPositions)
+                        {
+                            if (RockPositoon.x + 1 == coord.x && RockPositoon.y == coord.y)
+                            {
+                                move = false;
+                                break;
+                            }
+                        }
 
-                        Invoke("AnimationCallBack", callBackTime);
+                        if (move)
+                        {
+                            RockPositoon = new Vector2Int()
+                            {
+                                x = RockPositoon.x + 1,
+                                y = RockPositoon.y
+                            };
 
-                        move = false;
-                    }
-                    break;
+                            rockPositionManager.RockPositions[Index].x += 1;
+                            animator.SetBool("Right", true);
+
+                            Invoke("AnimationCallBack", callBackTime);
+
+                            move = false;
+                        }
+                        break;
+                }
             }
         }
-    }
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        move = true;
-    }
+        public void OnTriggerEnter2D(Collider2D other)
+        {
+            move = true;
+        }
 
-    public Vector2Int RockPosition
-    {
-        set => rockPositoon = value;
-    }
-    public int Index
-    {
-        set => index = value;
-    }
-
-    private void AnimationCallBack()
-    {
-        animator.SetBool("Up", false);
-        animator.SetBool("Down", false);
-        animator.SetBool("Left", false);
-        animator.SetBool("Right", false);
+        private void AnimationCallBack()
+        {
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Left", false);
+            animator.SetBool("Right", false);
+        }
     }
 }

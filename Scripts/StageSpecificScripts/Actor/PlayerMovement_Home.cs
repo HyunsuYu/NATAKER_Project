@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 using Assets.Scripts.StageSpecificScripts.Manager;
+using Assets.Scripts.SystemScripts.SituaitionScripts;
 
 
 
@@ -8,24 +9,22 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 {
     public sealed class PlayerMovement_Home : MonoBehaviour
     {
-        public Animator childPlayerAnimator;
+        public WallPositionManager WallPositionManager { get; set; }
+        public TotalDoorManager TotalDoorManager { get; set; }
 
-        public WallPositionManager wallPositionManager;
-        public TotalDoorManager totalDoorManager;
-
-        public float animationSpeed;
-
-        public float animationLength;
-        private bool moving;
-        private bool kicking;
-
+        [SerializeField] private Animator childPlayerAnimator;
+        [SerializeField] private float animationSpeed;
+        [SerializeField] private float animationLength;
+        
         [SerializeField] private Situaition_Home_Intro eventManager;
 
-        public Vector2Int playerPosition;
+        public Vector2Int PlayerPosition { get; set; }
 
-        [SerializeField] private KeyCode curKeyCode;
+        public bool Moving { get; private set; }
+        public bool Kicking { get; private set; }
+        public KeyCode CurKeyCode { get; private set; }
 
-        public OptionManager optionManager;
+        [SerializeField] private OptionManager optionManager;
 
         [SerializeField] private AudioSource playerAudioSource;
         [SerializeField] private AudioClip kickaudioClip;
@@ -37,72 +36,77 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
         {
             animationLength = childPlayerAnimator.runtimeAnimatorController.animationClips[0].length / animationSpeed;
 
-            //playerPosition = new Vector2Int()
-            //{
-            //    x = (int)transform.position.x,
-            //    y = (int)transform.position.y
-            //};
+            var tempPosition = transform.position;
+            PlayerPosition = new Vector2Int()
+            {
+                x = (int)tempPosition.x,
+                y = (int)tempPosition.y
+            };
         }
         public void Update()
         {
-            if((eventManager == null ? true : eventManager.eventEnd) && !optionManager.optionIsActive)
+            if((eventManager == null ? true : eventManager.eventEnd) && !optionManager.OptionIsActive)
             {
-                if (moving == false && kicking == false && Input.GetKeyDown(KeyCode.W))
+                if (Moving == false && Kicking == false && Input.GetKeyDown(KeyCode.W))
                 {
-                    moving = true;
-                    kicking = false;
+                    Moving = true;
+                    Kicking = false;
 
-                    if (!(wallPositionManager.WallPosition[playerPosition.y + 1 - wallPositionManager.Origin.y, playerPosition.x - wallPositionManager.Origin.x]))
+                    if (!(WallPositionManager.WallPosition[PlayerPosition.y + 1 - WallPositionManager.Origin.y, PlayerPosition.x - WallPositionManager.Origin.x]))
                     {
-                        moving = false;
-                        kicking = true;
+                        Moving = false;
+                        Kicking = true;
                     }
 
-                    if (!kicking)
+                    if (!Kicking)
                     {
-                        for (int index = 0; index < totalDoorManager.DoorPositions.Count; index++)
+                        for (int index = 0; index < TotalDoorManager.DoorPositions.Count; index++)
                         {
                             bool flag = false;
 
-                            if (totalDoorManager.DoorSides[index] == Side.Left && (playerPosition.x == totalDoorManager.DoorPositions[index].x && playerPosition.y + 1 == totalDoorManager.DoorPositions[index].y))
+                            if (TotalDoorManager.DoorSides[index] == Side.Left && (PlayerPosition.x == TotalDoorManager.DoorPositions[index].x && PlayerPosition.y + 1 == TotalDoorManager.DoorPositions[index].y))
                             {
                                 flag = true;
 
-                                totalDoorManager.IsToUp = true;
+                                TotalDoorManager.IsToUp = true;
                             }
-                            else if(totalDoorManager.DoorSides[index] == Side.Right && (playerPosition.x == totalDoorManager.DoorPositions[index].x && playerPosition.y + 1 == totalDoorManager.DoorPositions[index].y))
+                            else if(TotalDoorManager.DoorSides[index] == Side.Right && (PlayerPosition.x == TotalDoorManager.DoorPositions[index].x && PlayerPosition.y + 1 == TotalDoorManager.DoorPositions[index].y))
                             {
                                 flag = true;
 
-                                totalDoorManager.IsToUp = true;
+                                TotalDoorManager.IsToUp = true;
                             }
 
                             if (flag)
                             {
-                                totalDoorManager.ActiveDoorIndex = index;
+                                TotalDoorManager.ActiveDoorIndex = index;
 
-                                moving = false;
-                                kicking = true;
+                                Moving = false;
+                                Kicking = true;
 
                                 break;
                             }
                         }
                     }
 
-                    if (moving)
+                    if (Moving)
                     {
-                        curKeyCode = KeyCode.W;
+                        CurKeyCode = KeyCode.W;
 
-                        playerPosition.y += 1;
+                        PlayerPosition = new Vector2Int()
+                        {
+                            x = PlayerPosition.x,
+                            y = PlayerPosition.y + 1
+                        };
 
                         childPlayerAnimator.SetBool("Go", true);
                         childPlayerAnimator.SetBool("Up", true);
                         //childPlayerAnimator.Play("GoUp");
                         Invoke("MoveUp", animationLength);
                     }
-                    else if (kicking)
+                    else if (Kicking)
                     {
-                        curKeyCode = KeyCode.W;
+                        CurKeyCode = KeyCode.W;
 
                         childPlayerAnimator.SetBool("Kick", true);
                         //childPlayerAnimator.SetBool("Up", true);
@@ -110,62 +114,66 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         Invoke("KickCallBack", animationLength);
                     }
                 }
-                if (moving == false && kicking == false && Input.GetKeyDown(KeyCode.S))
+                if (Moving == false && Kicking == false && Input.GetKeyDown(KeyCode.S))
                 {
-                    moving = true;
-                    kicking = false;
+                    Moving = true;
+                    Kicking = false;
 
-                    if (!(wallPositionManager.WallPosition[playerPosition.y - 1 - wallPositionManager.Origin.y, playerPosition.x - wallPositionManager.Origin.x]))
+                    if (!(WallPositionManager.WallPosition[PlayerPosition.y - 1 - WallPositionManager.Origin.y, PlayerPosition.x - WallPositionManager.Origin.x]))
                     {
-                        moving = false;
-                        kicking = true;
+                        Moving = false;
+                        Kicking = true;
                     }
 
-                    if (!kicking && totalDoorManager.DoorPositions.Count > 0)
+                    if (!Kicking && TotalDoorManager.DoorPositions.Count > 0)
                     {
-                        for (int index = 0; index < totalDoorManager.DoorPositions.Count; index++)
+                        for (int index = 0; index < TotalDoorManager.DoorPositions.Count; index++)
                         {
                             bool flag = false;
 
-                            if (totalDoorManager.DoorSides[index] == Side.Left && (playerPosition.x == totalDoorManager.DoorPositions[index].x && playerPosition.y - 1 == totalDoorManager.DoorPositions[index].y))
+                            if (TotalDoorManager.DoorSides[index] == Side.Left && (PlayerPosition.x == TotalDoorManager.DoorPositions[index].x && PlayerPosition.y - 1 == TotalDoorManager.DoorPositions[index].y))
                             {
                                 flag = true;
 
-                                totalDoorManager.IsToUp = false;
+                                TotalDoorManager.IsToUp = false;
                             }
-                            else if(totalDoorManager.DoorSides[index] == Side.Right && (playerPosition.x == totalDoorManager.DoorPositions[index].x && playerPosition.y - 1 == totalDoorManager.DoorPositions[index].y))
+                            else if(TotalDoorManager.DoorSides[index] == Side.Right && (PlayerPosition.x == TotalDoorManager.DoorPositions[index].x && PlayerPosition.y - 1 == TotalDoorManager.DoorPositions[index].y))
                             {
                                 flag = true;
 
-                                totalDoorManager.IsToUp = false;
+                                TotalDoorManager.IsToUp = false;
                             }
 
                             if (flag)
                             {
-                                totalDoorManager.ActiveDoorIndex = index;
+                                TotalDoorManager.ActiveDoorIndex = index;
 
-                                moving = false;
-                                kicking = true;
+                                Moving = false;
+                                Kicking = true;
 
                                 break;
                             }
                         }
                     }
 
-                    if (moving)
+                    if (Moving)
                     {
-                        curKeyCode = KeyCode.S;
+                        CurKeyCode = KeyCode.S;
 
-                        playerPosition.y -= 1;
+                        PlayerPosition = new Vector2Int()
+                        {
+                            x = PlayerPosition.x,
+                            y = PlayerPosition.y - 1
+                        };
 
                         childPlayerAnimator.SetBool("Go", true);
                         childPlayerAnimator.SetBool("Down", true);
                         //childPlayerAnimator.Play("GoDown");
                         Invoke("MoveDown", animationLength);
                     }
-                    else if (kicking)
+                    else if (Kicking)
                     {
-                        curKeyCode = KeyCode.S;
+                        CurKeyCode = KeyCode.S;
 
                         childPlayerAnimator.SetBool("Kick", true);
                         //childPlayerAnimator.SetBool("Up", true);
@@ -173,22 +181,26 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         Invoke("KickCallBack", animationLength);
                     }
                 }
-                if (moving == false && kicking == false && Input.GetKeyDown(KeyCode.D))
+                if (Moving == false && Kicking == false && Input.GetKeyDown(KeyCode.D))
                 {
-                    moving = true;
-                    kicking = false;
+                    Moving = true;
+                    Kicking = false;
 
-                    if (!(wallPositionManager.WallPosition[playerPosition.y - wallPositionManager.Origin.y, playerPosition.x + 1 - wallPositionManager.Origin.x]))
+                    if (!(WallPositionManager.WallPosition[PlayerPosition.y - WallPositionManager.Origin.y, PlayerPosition.x + 1 - WallPositionManager.Origin.x]))
                     {
-                        moving = false;
-                        kicking = true;
+                        Moving = false;
+                        Kicking = true;
                     }
 
-                    if (moving)
+                    if (Moving)
                     {
-                        curKeyCode = KeyCode.D;
+                        CurKeyCode = KeyCode.D;
 
-                        playerPosition.x += 1;
+                        PlayerPosition = new Vector2Int()
+                        {
+                            x = PlayerPosition.x + 1,
+                            y = PlayerPosition.y
+                        };
 
                         childPlayerAnimator.SetBool("Go", true);
                         childPlayerAnimator.SetBool("Right", true);
@@ -198,9 +210,9 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         //childPlayerAnimator.Play("GoRight");
                         Invoke("MoveRight", animationLength);
                     }
-                    else if (kicking)
+                    else if (Kicking)
                     {
-                        curKeyCode = KeyCode.D;
+                        CurKeyCode = KeyCode.D;
                          
                         childPlayerAnimator.SetBool("Kick", true);
 
@@ -210,22 +222,26 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         Invoke("KickCallBack", animationLength);
                     }
                 }
-                if (moving == false && kicking == false && Input.GetKeyDown(KeyCode.A))
+                if (Moving == false && Kicking == false && Input.GetKeyDown(KeyCode.A))
                 {
-                    moving = true;
-                    kicking = false;
+                    Moving = true;
+                    Kicking = false;
 
-                    if (!(wallPositionManager.WallPosition[playerPosition.y - wallPositionManager.Origin.y, playerPosition.x - 1 - wallPositionManager.Origin.x]))
+                    if (!(WallPositionManager.WallPosition[PlayerPosition.y - WallPositionManager.Origin.y, PlayerPosition.x - 1 - WallPositionManager.Origin.x]))
                     {
-                        moving = false;
-                        kicking = true;
+                        Moving = false;
+                        Kicking = true;
                     }
 
-                    if (moving)
+                    if (Moving)
                     {
-                        curKeyCode = KeyCode.A;
+                        CurKeyCode = KeyCode.A;
 
-                        playerPosition.x -= 1;
+                        PlayerPosition = new Vector2Int()
+                        {
+                            x = PlayerPosition.x - 1,
+                            y = PlayerPosition.y
+                        };
 
                         childPlayerAnimator.SetBool("Go", true);
                         childPlayerAnimator.SetBool("Left", true);
@@ -235,9 +251,9 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
                         //childPlayerAnimator.Play("GoLeft");
                         Invoke("MoveLeft", animationLength);
                     }
-                    else if (kicking)
+                    else if (Kicking)
                     {
-                        curKeyCode = KeyCode.A;
+                        CurKeyCode = KeyCode.A;
 
                         childPlayerAnimator.SetBool("Kick", true);
 
@@ -261,45 +277,20 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
             }
         }
 
+        private void CalculateMoveing(in KeyCode keyCode)
+        {
 
-        public bool Moving
-        {
-            get => moving;
         }
-        public bool Kicking
-        {
-            get => kicking;
-        }
-        public WallPositionManager WallPositionManager
-        {
-            get => wallPositionManager;
-            set => wallPositionManager = value;
-        }
-        public TotalDoorManager TotalDoorManager
-        {
-            get => totalDoorManager;
-            set => totalDoorManager = value;
-        }
-        public Vector2Int PlayerPosition
-        {
-            get => playerPosition;
-            set => playerPosition = value;
-        }
-        public KeyCode CurKeyCode
-        {
-            get => curKeyCode;
-        }
-
 
         private void KickCallBack()
         {
             childPlayerAnimator.SetBool("Kick", false);
 
-            curKeyCode = KeyCode.None;
+            CurKeyCode = KeyCode.None;
 
             playerAudioSource.clip = null;
 
-            kicking = false;
+            Kicking = false;
         }
 
         private void MoveUp()
@@ -309,9 +300,9 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
             playerAudioSource.clip = null;
 
-            moving = false;
+            Moving = false;
 
-            curKeyCode = KeyCode.None;
+            CurKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoUp", false);
         }
@@ -322,9 +313,9 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
             playerAudioSource.clip = null;
 
-            moving = false;
+            Moving = false;
 
-            curKeyCode = KeyCode.None;
+            CurKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoDown", false);
         }
@@ -335,9 +326,9 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
             playerAudioSource.clip = null;
 
-            moving = false;
+            Moving = false;
 
-            curKeyCode = KeyCode.None;
+            CurKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoRight", false);
         }
@@ -348,9 +339,9 @@ namespace NATAKER_DLL.StageSpecific.Home.Actor
 
             playerAudioSource.clip = null;
 
-            moving = false;
+            Moving = false;
 
-            curKeyCode = KeyCode.None;
+            CurKeyCode = KeyCode.None;
 
             //childPlayerAnimator.SetBool("GoLeft", false);
         }

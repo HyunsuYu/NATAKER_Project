@@ -14,13 +14,14 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 
     public sealed class TubeEnterPoint : MonoBehaviour
     {
-        public bool active;
-        public TubeEnterPosition tubeEnterPosition;
+        public bool Active { get; set; }
 
-        public Vector2Int tubeEnterPointPosition;
-        public PlayerMovement_Stage playerMovement;
+        [SerializeField] private TubeEnterPosition tubeEnterPosition;
 
-        public SingleStageData stageData;
+        [SerializeField] private Vector2Int tubeEnterPointPosition;
+        [SerializeField] private PlayerMovement_Stage playerMovement;
+
+        [SerializeField] private SingleStageData stageData;
 
 
 
@@ -31,23 +32,23 @@ namespace Assets.Scripts.StageSpecificScripts.Data
         }
         public void OnTriggerStay2D(Collider2D other)
         {
-            if (other.tag == "Player" && tubeEnterPointPosition == playerMovement.playerPosition && playerMovement.Kicking)
+            if (other.tag == "Player" && tubeEnterPointPosition == playerMovement.PlayerPosition && playerMovement.Kicking)
             {
                 if (tubeEnterPosition == TubeEnterPosition.Up && Input.GetKey(KeyCode.W))
                 {
-                    active = true;
+                    Active = true;
                 }
                 else if (tubeEnterPosition == TubeEnterPosition.Down && Input.GetKey(KeyCode.S))
                 {
-                    active = true;
+                    Active = true;
                 }
                 else if (tubeEnterPosition == TubeEnterPosition.Left && Input.GetKey(KeyCode.A))
                 {
-                    active = true;
+                    Active = true;
                 }
                 else if (tubeEnterPosition == TubeEnterPosition.Right && Input.GetKey(KeyCode.D))
                 {
-                    active = true;
+                    Active = true;
                 }
             }
         }

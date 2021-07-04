@@ -6,18 +6,23 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 {
     public sealed class StatueHitBox : MonoBehaviour
     {
-        public bool active;
-        public KeyCode keyCode;
+        public bool Active { get; private set; }
+        [SerializeField] private KeyCode targetKeyCode;
 
 
 
         public void OnTriggerEnter2D(Collider2D other)
         {
-            active = true;
+            Active = true;
         }
         public void OnTriggerExit2D(Collider2D other)
         {
-            active = false;
+            Active = false;
+        }
+
+        public KeyCode TargetKeyCode
+        {
+            get => targetKeyCode;
         }
     }
 }

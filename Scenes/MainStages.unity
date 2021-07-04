@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -267,9 +267,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &8981100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -414,9 +411,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &12461763
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -539,7 +533,6 @@ MonoBehaviour:
   - {fileID: 648122784}
   rockPositions: []
   stageData: {fileID: 1450731003}
-  rockMovements: []
 --- !u!1 &21715215
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,9 +776,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &24684341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -931,9 +921,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &25570854
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1090,7 +1077,6 @@ MonoBehaviour:
   - {fileID: 1794146774}
   - {fileID: 133629217}
   stageData: {fileID: 769952791}
-  active: 0
 --- !u!1 &58970262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,9 +1278,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &68587667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1639,7 +1622,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &80391376
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1836,9 +1818,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &91153906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2101,9 +2080,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &115867885
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2277,8 +2253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 119
+  targetKeyCode: 119
 --- !u!61 &133629218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2359,7 +2334,6 @@ MonoBehaviour:
   - {fileID: 1072412362}
   - {fileID: 1264944734}
   stageData: {fileID: 1450731003}
-  active: 0
 --- !u!212 &138259993
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2635,9 +2609,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &145143721
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2783,9 +2754,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &159353433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2931,9 +2899,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &164623592
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3110,13 +3075,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 1795219789}
   arrowCollider: {fileID: 1795219791}
   arrowHitBox: {fileID: 1795219790}
-  stageData: {fileID: 769952791}
 --- !u!1 &180394153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,9 +3199,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &180394158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3359,9 +3319,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &181530524
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3539,9 +3496,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &185598206
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3823,7 +3777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &192256218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4621,13 +4574,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 1119746156}
   arrowCollider: {fileID: 1119746159}
   arrowHitBox: {fileID: 1119746158}
-  stageData: {fileID: 1450731003}
 --- !u!212 &261231180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4747,7 +4698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &267914600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4869,7 +4819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 2
   tubeEnterPointPosition: {x: 54, y: 9}
   playerMovement: {fileID: 1377369329}
@@ -5157,9 +5106,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &281451932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5421,13 +5367,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 267914597}
   arrowCollider: {fileID: 267914600}
   arrowHitBox: {fileID: 267914599}
-  stageData: {fileID: 624662566}
 --- !u!212 &294640192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5853,7 +5797,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &305951999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5999,7 +5942,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &306262130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6293,13 +6235,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 1075187266}
   arrowCollider: {fileID: 1075187269}
   arrowHitBox: {fileID: 1075187268}
-  stageData: {fileID: 624662566}
 --- !u!212 &315961569
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6445,9 +6385,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &317335932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6573,13 +6510,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 908176613}
   arrowCollider: {fileID: 908176616}
   arrowHitBox: {fileID: 908176615}
-  stageData: {fileID: 1795611684}
 --- !u!212 &333009135
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6997,7 +6932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &338014567
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7169,9 +7103,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &338698389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7375,9 +7306,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &350227420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7467,7 +7395,6 @@ MonoBehaviour:
   - {fileID: 1260530838}
   rockPositions: []
   stageData: {fileID: 624662566}
-  rockMovements: []
 --- !u!1 &356686702
 GameObject:
   m_ObjectHideFlags: 0
@@ -7562,9 +7489,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &356686707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7710,9 +7634,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &361201845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7858,9 +7779,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &361329475
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8017,7 +7935,6 @@ MonoBehaviour:
   - {fileID: 477775711}
   - {fileID: 781709614}
   stageData: {fileID: 769952791}
-  active: 0
 --- !u!1 &394320997
 GameObject:
   m_ObjectHideFlags: 0
@@ -8124,13 +8041,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 1029975470}
   arrowCollider: {fileID: 1029975473}
   arrowHitBox: {fileID: 1029975472}
-  stageData: {fileID: 624662566}
 --- !u!212 &397358983
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8259,8 +8174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 100
+  targetKeyCode: 100
 --- !u!61 &418848292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8381,9 +8295,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &419080787
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8598,9 +8509,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &457591431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8820,8 +8728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 115
+  targetKeyCode: 115
 --- !u!61 &477775712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8916,7 +8823,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &481239200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9062,7 +8968,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &485164388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9309,7 +9214,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &492129924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9431,7 +9335,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 0
   tubeEnterPointPosition: {x: 13, y: -24}
   playerMovement: {fileID: 1377369329}
@@ -9587,9 +9490,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &510921990
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9714,13 +9614,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 2
   flySpeed: 10
   arrowTransform: {fileID: 751311379}
   arrowCollider: {fileID: 751311382}
   arrowHitBox: {fileID: 751311381}
-  stageData: {fileID: 1450731003}
 --- !u!212 &523084706
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9826,7 +9724,6 @@ MonoBehaviour:
   - {fileID: 1557955739}
   - {fileID: 2018548337}
   stageData: {fileID: 624662566}
-  active: 0
 --- !u!212 &533720594
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10142,7 +10039,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &549989692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10311,7 +10207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 0
   tubeEnterPointPosition: {x: 15, y: 13}
   playerMovement: {fileID: 1377369329}
@@ -10360,8 +10255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 115
+  targetKeyCode: 115
 --- !u!61 &556650646
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10492,7 +10386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 1
   tubeEnterPointPosition: {x: 14, y: 19}
   playerMovement: {fileID: 1377369329}
@@ -10622,13 +10515,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 2022822952}
   arrowCollider: {fileID: 2022822954}
   arrowHitBox: {fileID: 2022822953}
-  stageData: {fileID: 769952791}
 --- !u!1 &578697233
 GameObject:
   m_ObjectHideFlags: 0
@@ -12082,9 +11973,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &578873072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12410,9 +12298,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &582466501
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12558,9 +12443,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &586528061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12894,13 +12776,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 617452004}
   arrowCollider: {fileID: 617452007}
   arrowHitBox: {fileID: 617452006}
-  stageData: {fileID: 624662566}
 --- !u!212 &590219556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13046,9 +12926,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &590892716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13174,13 +13051,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 2
   flySpeed: 10
   arrowTransform: {fileID: 2136803487}
   arrowCollider: {fileID: 2136803490}
   arrowHitBox: {fileID: 2136803489}
-  stageData: {fileID: 1450731003}
 --- !u!212 &593753984
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13326,9 +13201,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &606629216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13448,7 +13320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &617452007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13863,8 +13734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 119
+  targetKeyCode: 119
 --- !u!61 &629884084
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13985,9 +13855,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &648122789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14146,7 +14013,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &650767185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14413,13 +14279,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 650767182}
   arrowCollider: {fileID: 650767185}
   arrowHitBox: {fileID: 650767184}
-  stageData: {fileID: 1795611684}
 --- !u!212 &661419306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14525,7 +14389,6 @@ MonoBehaviour:
   - {fileID: 2034778464}
   - {fileID: 1880755328}
   stageData: {fileID: 1450731003}
-  active: 0
 --- !u!212 &665342434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14800,13 +14663,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 492129921}
   arrowCollider: {fileID: 492129924}
   arrowHitBox: {fileID: 492129923}
-  stageData: {fileID: 1450731003}
 --- !u!212 &669406679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14973,8 +14834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 100
+  targetKeyCode: 100
 --- !u!61 &679718242
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15246,9 +15106,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &702307113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15394,9 +15251,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &705997844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15633,8 +15487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 100
+  targetKeyCode: 100
 --- !u!61 &727870333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15787,9 +15640,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &735119932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16015,7 +15865,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &749931407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16161,7 +16010,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &751311382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16333,9 +16181,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &758734403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16528,7 +16373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &762201605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16700,9 +16544,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &762983798
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16848,9 +16689,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &764669873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17190,9 +17028,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &777976949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17288,7 +17123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 2
   tubeEnterPointPosition: {x: 16, y: -26}
   playerMovement: {fileID: 1377369329}
@@ -17363,8 +17197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 100
+  targetKeyCode: 100
 --- !u!61 &781709615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17668,9 +17501,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &790837945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17986,7 +17816,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &805041739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18236,9 +18065,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &808679031
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18383,9 +18209,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &812108716
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18481,8 +18304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 97
+  targetKeyCode: 97
 --- !u!61 &813365436
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18634,13 +18456,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 1453501854}
   arrowCollider: {fileID: 1453501856}
   arrowHitBox: {fileID: 1453501855}
-  stageData: {fileID: 769952791}
 --- !u!1 &816949834
 GameObject:
   m_ObjectHideFlags: 0
@@ -18857,7 +18677,6 @@ MonoBehaviour:
   optionPanel: {fileID: 1941073180}
   audioSource: {fileID: 1570893706}
   scrollbar: {fileID: 2047665746}
-  optionIsActive: 0
   soundVolumeManager: {fileID: 0}
 --- !u!4 &820041596
 Transform:
@@ -18920,7 +18739,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &822941025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19063,7 +18881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 1
   tubeEnterPointPosition: {x: 58, y: 18}
   playerMovement: {fileID: 1377369329}
@@ -19141,7 +18958,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &824685766
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19314,13 +19130,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 1825966350}
   arrowCollider: {fileID: 1825966353}
   arrowHitBox: {fileID: 1825966352}
-  stageData: {fileID: 1450731003}
 --- !u!212 &831495151
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19477,7 +19291,6 @@ MonoBehaviour:
   - {fileID: 727870332}
   - {fileID: 2137616204}
   stageData: {fileID: 769952791}
-  active: 0
 --- !u!1 &838495146
 GameObject:
   m_ObjectHideFlags: 0
@@ -19643,9 +19456,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &839570450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19791,9 +19601,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &843644543
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19918,13 +19725,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 305951996}
   arrowCollider: {fileID: 305951999}
   arrowHitBox: {fileID: 305951998}
-  stageData: {fileID: 1795611684}
 --- !u!212 &848742728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20258,9 +20063,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &861300408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20386,13 +20188,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 2073776283}
   arrowCollider: {fileID: 2073776286}
   arrowHitBox: {fileID: 2073776285}
-  stageData: {fileID: 1795611684}
 --- !u!212 &861383854
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20505,10 +20305,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1570893705}
   rockPositionManager: {fileID: 1891682899}
   speed: 5
-  enter: 0
-  arrive: 0
   stageData: {fileID: 769952791}
-  isExcuted: 0
 --- !u!1 &869832555
 GameObject:
   m_ObjectHideFlags: 0
@@ -20583,13 +20380,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 306262127}
   arrowCollider: {fileID: 306262130}
   arrowHitBox: {fileID: 306262129}
-  stageData: {fileID: 624662566}
 --- !u!212 &869832559
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20709,7 +20504,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &880328692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21037,9 +20831,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &895413886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21160,9 +20951,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &899386274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21282,7 +21070,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &908176616
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21467,7 +21254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 3
   tubeEnterPointPosition: {x: 54, y: 16}
   playerMovement: {fileID: 1377369329}
@@ -21592,9 +21378,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &921488986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22019,7 +21802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1832915365}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!4 &945670114
 Transform:
   m_ObjectHideFlags: 0
@@ -22128,9 +21910,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &955840271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22256,13 +22035,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 749931404}
   arrowCollider: {fileID: 749931407}
   arrowHitBox: {fileID: 749931406}
-  stageData: {fileID: 1795611684}
 --- !u!212 &956528263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22388,13 +22165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 1996101420}
   arrowCollider: {fileID: 1996101423}
   arrowHitBox: {fileID: 1996101422}
-  stageData: {fileID: 624662566}
 --- !u!212 &962641889
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22520,13 +22295,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 2146736451}
   arrowCollider: {fileID: 2146736454}
   arrowHitBox: {fileID: 2146736453}
-  stageData: {fileID: 1795611684}
 --- !u!212 &983558944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22672,9 +22445,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &987469854
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24765,9 +24535,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1006501163
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24887,7 +24654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1016649961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25121,13 +24887,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 481239197}
   arrowCollider: {fileID: 481239200}
   arrowHitBox: {fileID: 481239199}
-  stageData: {fileID: 1450731003}
 --- !u!212 &1024486042
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25241,10 +25005,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1570893705}
   rockPositionManager: {fileID: 13515703}
   speed: 5
-  enter: 0
-  arrive: 0
   stageData: {fileID: 1450731003}
-  isExcuted: 0
 --- !u!1 &1029975469
 GameObject:
   m_ObjectHideFlags: 0
@@ -25313,7 +25074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1029975473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25509,9 +25269,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1039490642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25657,9 +25414,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1042002410
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25780,9 +25534,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1043711950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -25953,9 +25704,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1044661746
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26050,7 +25798,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1046729232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26222,9 +25969,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1049046756
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26551,9 +26295,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1060354232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -26834,8 +26575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 100
+  targetKeyCode: 100
 --- !u!61 &1072412363
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26930,7 +26670,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1075187269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27287,9 +27026,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1082305006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27410,9 +27146,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1099865098
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27609,13 +27342,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 1319773270}
   arrowCollider: {fileID: 1319773273}
   arrowHitBox: {fileID: 1319773272}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1115237320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27735,7 +27466,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1119746159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28181,8 +27911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 115
+  targetKeyCode: 115
 --- !u!61 &1147666199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28375,13 +28104,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 762201602}
   arrowCollider: {fileID: 762201605}
   arrowHitBox: {fileID: 762201604}
-  stageData: {fileID: 1450731003}
 --- !u!212 &1153796180
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -28539,7 +28266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 1
   tubeEnterPointPosition: {x: 11, y: 10}
   playerMovement: {fileID: 1377369329}
@@ -28669,13 +28395,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 549989690}
   arrowCollider: {fileID: 549989692}
   arrowHitBox: {fileID: 549989691}
-  stageData: {fileID: 769952791}
 --- !u!1 &1188430537
 GameObject:
   m_ObjectHideFlags: 0
@@ -28795,9 +28519,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1188430542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28989,9 +28710,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1207058557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29148,7 +28866,6 @@ MonoBehaviour:
   - {fileID: 1886308856}
   - {fileID: 2107150369}
   stageData: {fileID: 769952791}
-  active: 0
 --- !u!1 &1210630796
 GameObject:
   m_ObjectHideFlags: 0
@@ -29268,9 +28985,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1210630801
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29653,7 +29367,6 @@ MonoBehaviour:
   - {fileID: 813365435}
   - {fileID: 1147666198}
   stageData: {fileID: 624662566}
-  active: 0
 --- !u!212 &1230337643
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -29734,9 +29447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6ff26c3ecd44a4188cd4be81203683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backGroundImage: {fileID: 1913215504}
   playerMovement: {fileID: 1377369329}
   playerTranstorm: {fileID: 1570893705}
+  playerStatus: {fileID: 1377369331}
   stageObjectsPositionResetManagers:
   - {fileID: 769952793}
   - {fileID: 624662567}
@@ -29747,19 +29460,17 @@ MonoBehaviour:
   - {fileID: 624662566}
   - {fileID: 1450731003}
   - {fileID: 1795611684}
-  playerStatus: {fileID: 1377369331}
   cloud: {fileID: 1258060488}
   cloudRectTransform: {fileID: 1258060489}
   cloudSpeed: 1000
   stageChangeInvokeTime: 3
   basePosition: {x: 1920, y: 0}
   targetPosition: {x: -4900, y: 0}
-  curStageIndex: 0
   situaition_MainStage_Exit: {fileID: 297238293}
   exitScriptGameObject: {fileID: 297238292}
   lastStageObject: {fileID: 2054010032}
+  backGroundImage: {fileID: 1913215504}
   stageNum: {fileID: 302768609}
-  die: 0
 --- !u!4 &1234845255
 Transform:
   m_ObjectHideFlags: 0
@@ -30223,9 +29934,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1258660514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30346,9 +30054,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1260530843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30444,8 +30149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 115
+  targetKeyCode: 115
 --- !u!61 &1264944735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31078,7 +30782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 1
   tubeEnterPointPosition: {x: 12, y: -18}
   playerMovement: {fileID: 1377369329}
@@ -31177,7 +30880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1319773273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31309,7 +31011,6 @@ MonoBehaviour:
   - {fileID: 679718241}
   - {fileID: 556650645}
   stageData: {fileID: 1795611684}
-  active: 0
 --- !u!212 &1320656013
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31604,9 +31305,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1326278593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31752,9 +31450,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1332477767
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32167,9 +31862,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1336255103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32347,9 +32039,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1342655124
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32432,7 +32121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 578697236}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!4 &1354828261
 Transform:
   m_ObjectHideFlags: 0
@@ -32541,9 +32229,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1357658421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -32939,23 +32624,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceaf395a2781e748827fc0531f4a4e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStatus: {fileID: 1377369331}
+  childPlayerAnimator: {fileID: 1570893701}
+  animationSpeed: 3.5
+  animationLength: 0
+  situaition_MainStage: {fileID: 612543}
+  stageManager: {fileID: 1234845254}
   singleTubeManagers:
   - {fileID: 868265223}
   - {fileID: 1449250643}
   optionManager: {fileID: 820041595}
-  childPlayerAnimator: {fileID: 1570893701}
-  wallPositionManager: {fileID: 1554186091}
-  rockPositionManager: {fileID: 1891682899}
-  playerStatus: {fileID: 1377369331}
-  stageData: {fileID: 769952791}
-  animationSpeed: 4
-  animationLength: 0
-  moving: 0
-  kicking: 0
-  playerPosition: {x: 14, y: 12}
-  CurKeyCode: 0
-  situaition_MainStage: {fileID: 612543}
-  stageManager: {fileID: 1234845254}
   playerAudioSource: {fileID: 1570893706}
   kickAudioClip: {fileID: 8300000, guid: 4a07c516e0d18d942b6f50b9ff53644a, type: 3}
   dashAudioClip: {fileID: 8300000, guid: c9b00758d76b56a469e8aac68421ec5e, type: 3}
@@ -32986,7 +32664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f459341f4dd1dc4080bc6383b0dd3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveChance: 30
   leftMoveChance: {fileID: 1308261634}
 --- !u!1 &1381105198
 GameObject:
@@ -33107,9 +32784,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1381105203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33301,9 +32975,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1388841189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33734,7 +33405,6 @@ MonoBehaviour:
   - {fileID: 629884083}
   - {fileID: 418848291}
   stageData: {fileID: 624662566}
-  active: 0
 --- !u!212 &1421728251
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33994,10 +33664,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1570893705}
   rockPositionManager: {fileID: 1891682899}
   speed: 5
-  enter: 0
-  arrive: 0
   stageData: {fileID: 769952791}
-  isExcuted: 0
 --- !u!1 &1450731000
 GameObject:
   m_ObjectHideFlags: 0
@@ -34256,7 +33923,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1453501856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34697,9 +34363,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1467979581
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34824,13 +34487,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 192256215}
   arrowCollider: {fileID: 192256218}
   arrowHitBox: {fileID: 192256217}
-  stageData: {fileID: 1450731003}
 --- !u!212 &1468692137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35137,13 +34798,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 2128975778}
   arrowCollider: {fileID: 2128975781}
   arrowHitBox: {fileID: 2128975780}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1500735307
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35289,9 +34948,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1503920432
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35437,9 +35093,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1507483445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35585,9 +35238,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1510805444
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35804,9 +35454,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1535768216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -35903,7 +35550,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 991064294}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &1555146447
 GameObject:
   m_ObjectHideFlags: 0
@@ -36022,8 +35668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 97
+  targetKeyCode: 97
 --- !u!61 &1557955740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36144,9 +35789,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1562134102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36292,9 +35934,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1563193668
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36689,9 +36328,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1574206718
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -36817,13 +36453,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 1652790077}
   arrowCollider: {fileID: 1652790080}
   arrowHitBox: {fileID: 1652790079}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1580364896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37349,13 +36983,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 880328689}
   arrowCollider: {fileID: 880328692}
   arrowHitBox: {fileID: 880328691}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1598095628
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37582,13 +37214,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 1016649958}
   arrowCollider: {fileID: 1016649961}
   arrowHitBox: {fileID: 1016649960}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1601908879
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37812,9 +37442,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1608144067
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37960,10 +37587,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1570893705}
   rockPositionManager: {fileID: 352827391}
   speed: 5
-  enter: 0
-  arrive: 0
   stageData: {fileID: 624662566}
-  isExcuted: 0
 --- !u!1 &1618373119
 GameObject:
   m_ObjectHideFlags: 0
@@ -38156,13 +37780,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 1046729229}
   arrowCollider: {fileID: 1046729232}
   arrowHitBox: {fileID: 1046729231}
-  stageData: {fileID: 1450731003}
 --- !u!212 &1639007589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38282,7 +37904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1642504595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38428,7 +38049,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1652790080
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38568,7 +38188,6 @@ MonoBehaviour:
   - {fileID: 1467979576}
   rockPositions: []
   stageData: {fileID: 1795611684}
-  rockMovements: []
 --- !u!4 &1664084203
 Transform:
   m_ObjectHideFlags: 0
@@ -38922,9 +38541,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &1697001691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39025,13 +38641,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 1642504592}
   arrowCollider: {fileID: 1642504595}
   arrowHitBox: {fileID: 1642504594}
-  stageData: {fileID: 624662566}
 --- !u!212 &1698925945
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39157,13 +38771,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 2138278420}
   arrowCollider: {fileID: 2138278423}
   arrowHitBox: {fileID: 2138278422}
-  stageData: {fileID: 1450731003}
 --- !u!212 &1700126938
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39380,9 +38992,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1708833075
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39528,9 +39137,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1731473814
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39708,9 +39314,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1741196926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -39861,13 +39464,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 824685764}
   arrowCollider: {fileID: 824685766}
   arrowHitBox: {fileID: 824685765}
-  stageData: {fileID: 769952791}
 --- !u!61 &1745248215
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40059,9 +39660,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1754378179
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40336,13 +39934,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 1910916402}
   arrowCollider: {fileID: 1910916405}
   arrowHitBox: {fileID: 1910916404}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1764340998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40559,9 +40155,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1777442388
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40738,13 +40331,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 822941023}
   arrowCollider: {fileID: 822941025}
   arrowHitBox: {fileID: 822941024}
-  stageData: {fileID: 769952791}
 --- !u!1 &1794146772
 GameObject:
   m_ObjectHideFlags: 0
@@ -40789,8 +40380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 97
+  targetKeyCode: 97
 --- !u!61 &1794146775
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40864,7 +40454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1795219791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41247,9 +40836,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1796453839
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41411,13 +40997,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 485164385}
   arrowCollider: {fileID: 485164388}
   arrowHitBox: {fileID: 485164387}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1798338273
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41741,9 +41325,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1824436430
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41966,7 +41547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1825966353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43457,7 +43037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1843398736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43732,9 +43311,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1850177429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43912,9 +43488,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1862277183
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44136,9 +43709,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1867206429
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44234,8 +43804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 97
+  targetKeyCode: 97
 --- !u!61 &1880755329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44342,9 +43911,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1881574208
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44489,8 +44055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 97
+  targetKeyCode: 97
 --- !u!61 &1886308857
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44671,7 +44236,6 @@ MonoBehaviour:
   - {fileID: 1608144062}
   rockPositions: []
   stageData: {fileID: 769952791}
-  rockMovements: []
 --- !u!1 &1898337229
 GameObject:
   m_ObjectHideFlags: 0
@@ -44838,13 +44402,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 5
   flySpeed: 10
   arrowTransform: {fileID: 2084352597}
   arrowCollider: {fileID: 2084352600}
   arrowHitBox: {fileID: 2084352599}
-  stageData: {fileID: 1795611684}
 --- !u!212 &1900679974
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44964,7 +44526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1910916405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45262,9 +44823,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1927601025
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45410,9 +44968,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1929764679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45558,9 +45113,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1931813636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46171,10 +45723,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1570893705}
   rockPositionManager: {fileID: 13515703}
   speed: 5
-  enter: 0
-  arrive: 0
   stageData: {fileID: 1450731003}
-  isExcuted: 0
 --- !u!1 &1964237511
 GameObject:
   m_ObjectHideFlags: 0
@@ -46355,7 +45904,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 2088984182}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!4 &1967923164
 Transform:
   m_ObjectHideFlags: 0
@@ -46448,10 +45996,7 @@ MonoBehaviour:
   playerTransform: {fileID: 1570893705}
   rockPositionManager: {fileID: 352827391}
   speed: 5
-  enter: 0
-  arrive: 0
   stageData: {fileID: 624662566}
-  isExcuted: 0
 --- !u!1 &1971221630
 GameObject:
   m_ObjectHideFlags: 0
@@ -46526,13 +46071,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 80391373}
   arrowCollider: {fileID: 80391376}
   arrowHitBox: {fileID: 80391375}
-  stageData: {fileID: 1450731003}
 --- !u!212 &1971221634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46779,9 +46322,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1979573723
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -46927,9 +46467,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &1986482311
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47049,7 +46586,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &1996101423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47338,9 +46874,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2009820349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47473,7 +47006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 1
   tubeEnterPointPosition: {x: 46, y: 20}
   playerMovement: {fileID: 1377369329}
@@ -47548,8 +47080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 115
+  targetKeyCode: 115
 --- !u!61 &2018548338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47623,7 +47154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2022822954
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -47816,9 +47346,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2028048012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -47964,9 +47491,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2032287232
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48210,8 +47734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 115
+  targetKeyCode: 115
 --- !u!61 &2034778465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48332,9 +47855,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2043313952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48551,9 +48071,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2047454980
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -48845,9 +48362,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2050732398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -49274,7 +48788,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2073776286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49420,7 +48933,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2084352600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49674,9 +49186,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1664084202}
   wallPositionManager: {fileID: 1967923163}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2088299933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51518,13 +51027,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 3
   flySpeed: 10
   arrowTransform: {fileID: 805041736}
   arrowCollider: {fileID: 805041739}
   arrowHitBox: {fileID: 805041738}
-  stageData: {fileID: 1795611684}
 --- !u!212 &2094407041
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51670,9 +51177,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 13515703}
   wallPositionManager: {fileID: 945670113}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2096950867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -51849,13 +51353,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 0
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 7
   flySpeed: 10
   arrowTransform: {fileID: 1843398734}
   arrowCollider: {fileID: 1843398736}
   arrowHitBox: {fileID: 1843398735}
-  stageData: {fileID: 769952791}
 --- !u!1 &2107150367
 GameObject:
   m_ObjectHideFlags: 0
@@ -51900,8 +51402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 119
+  targetKeyCode: 119
 --- !u!61 &2107150370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51998,7 +51499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 0
   tubeEnterPointPosition: {x: 12, y: 4}
   playerMovement: {fileID: 1377369329}
@@ -52148,13 +51648,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDirection: 1
   targetPosition: {x: 0, y: 0, z: 0}
-  arrowCount: 3
   maxFlyLength: 4
   flySpeed: 10
   arrowTransform: {fileID: 338014564}
   arrowCollider: {fileID: 338014567}
   arrowHitBox: {fileID: 338014566}
-  stageData: {fileID: 1795611684}
 --- !u!212 &2117989408
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52371,9 +51869,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 352827391}
   wallPositionManager: {fileID: 1354828260}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!212 &2123779766
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -52493,7 +51988,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2128975781
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52639,7 +52133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2136803490
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52761,8 +52254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffddccc9f56f7e4c873cb17ec5ceb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  keyCode: 119
+  targetKeyCode: 119
 --- !u!61 &2137616205
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52857,7 +52349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2138278423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52979,7 +52470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf8fe3ee563254e9fdc588784f9c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
   tubeEnterPosition: 1
   tubeEnterPointPosition: {x: 13, y: -26}
   playerMovement: {fileID: 1377369329}
@@ -53128,9 +52618,6 @@ MonoBehaviour:
   playerMovement: {fileID: 1377369329}
   rockPositionManager: {fileID: 1891682899}
   wallPositionManager: {fileID: 1554186091}
-  rockPositoon: {x: 0, y: 0}
-  index: 0
-  move: 0
 --- !u!61 &2139235652
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -53407,7 +52894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStatus: {fileID: 1377369331}
-  collision: 0
 --- !u!61 &2146736454
 BoxCollider2D:
   m_ObjectHideFlags: 0

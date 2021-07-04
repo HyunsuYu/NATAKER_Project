@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -694,7 +694,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1174841347}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &38628970
 GameObject:
   m_ObjectHideFlags: 0
@@ -4615,7 +4614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!61 &188057646
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5648,7 +5646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!61 &287927282
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5915,7 +5912,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 150877724}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &341187979
 GameObject:
   m_ObjectHideFlags: 0
@@ -6837,7 +6833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1221925665}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!4 &493428097
 Transform:
   m_ObjectHideFlags: 0
@@ -7159,7 +7154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!61 &501724770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7953,7 +7947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &586125778
 GameObject:
   m_ObjectHideFlags: 0
@@ -8380,7 +8373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &622795737
 GameObject:
   m_ObjectHideFlags: 0
@@ -12583,7 +12575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!1 &1045239474
 GameObject:
   m_ObjectHideFlags: 0
@@ -12614,13 +12605,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childPlayerAnimator: {fileID: 1173859181}
-  wallPositionManager: {fileID: 0}
-  totalDoorManager: {fileID: 0}
-  animationSpeed: 4
+  animationSpeed: 3.5
   animationLength: 0
   eventManager: {fileID: 0}
-  playerPosition: {x: 0, y: 0}
-  curKeyCode: 0
   optionManager: {fileID: 1880986550}
   playerAudioSource: {fileID: 1173859182}
   kickaudioClip: {fileID: 8300000, guid: 4a07c516e0d18d942b6f50b9ff53644a, type: 3}
@@ -16943,10 +16930,6 @@ MonoBehaviour:
   - {fileID: 561957658}
   - {fileID: 1537988853}
   - {fileID: 1580149272}
-  audioClip_BirthdayCake: {fileID: 8300000, guid: 5377657c5263db4418f3d8f9b139b8d7,
-    type: 3}
-  audioSource: {fileID: 1173859182}
-  backGroundAudioSource: {fileID: 586125780}
   text: {fileID: 1653892667}
   backGroundImage: {fileID: 1130465547}
   textBoxBar: {fileID: 1631552503}
@@ -18338,7 +18321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1477033597}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &1238875448
 GameObject:
   m_ObjectHideFlags: 0
@@ -21910,8 +21892,6 @@ MonoBehaviour:
   - {x: 9, y: 5}
   wallPositionManager: {fileID: 493428096}
   curIndex: 0
-  flag: 0
-  checkStart: 0
 --- !u!1 &1511085049
 GameObject:
   m_ObjectHideFlags: 0
@@ -22223,7 +22203,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1151196130}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &1553723010
 GameObject:
   m_ObjectHideFlags: 0
@@ -22302,7 +22281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!61 &1557028509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23586,7 +23564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 73536822}
   origin: {x: 0, y: 0}
-  mapSize: {x: 0, y: 0}
 --- !u!1 &1675239975
 GameObject:
   m_ObjectHideFlags: 0
@@ -24416,7 +24393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc749dfc79b6beb4b97c653e7de17146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enter: 0
 --- !u!61 &1786878483
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24840,7 +24816,6 @@ MonoBehaviour:
   optionPanel: {fileID: 1715885021}
   audioSource: {fileID: 1173859182}
   scrollbar: {fileID: 508125378}
-  optionIsActive: 0
   soundVolumeManager: {fileID: 0}
 --- !u!4 &1880986551
 Transform:

@@ -2,12 +2,15 @@
 
 
 
-[CreateAssetMenu(fileName = "Situaition_MainStage_Scripts", menuName = "ScriptableObjects/Situaition_MainStage_Scripts", order = 2)]
-public sealed class Situaition_MainStage_Scripts : ScriptableObject
+namespace Assets.Scripts.SystemScripts.SituaitionScripts
 {
-    public string[] titles;
-    public string[] mainTexts;
-    public int[] charactorIndexesPerText;
-    public ImotType[] imots;
-    public ImotDirection[] imotDirection;
+    [CreateAssetMenu(fileName = "Situaition_MainStage_Scripts", menuName = "ScriptableObjects/Situaition_MainStage_Scripts", order = 2)]
+    public sealed class Situaition_MainStage_Scripts : ScriptableObject
+    {
+        public string[] titles;
+        public string[] mainTexts;
+        public int[] charactorIndexesPerText;
+        public ImotType[] imots;
+        public ImotDirection[] imotDirection;
+    }
 }

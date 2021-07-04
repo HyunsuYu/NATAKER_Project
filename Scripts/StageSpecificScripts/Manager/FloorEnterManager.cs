@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
-using NATAKER_DLL.StageSpecific.Home.Data;
+using Assets.Scripts.StageSpecificScripts.Data;
 
 
 
-namespace NATAKER_DLL.StageSpecific.Home.Manager
+namespace Assets.Scripts.StageSpecificScripts.Manager
 {
     public sealed class FloorEnterManager : MonoBehaviour
     {

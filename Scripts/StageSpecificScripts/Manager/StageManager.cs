@@ -12,16 +12,15 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 {
     public sealed class StageManager : MonoBehaviour
     {
-        [SerializeField] private Image backGroundImage;
-
         [SerializeField] private PlayerMovement_Stage playerMovement;
         [SerializeField] private Transform playerTranstorm;
 
-        [SerializeField] private StageObjectsPositionResetManager[] stageObjectsPositionResetManagers;
+        [SerializeField] private PlayerStatus playerStatus;
 
+        [SerializeField] private StageObjectsPositionResetManager[] stageObjectsPositionResetManagers;
         [SerializeField] private SingleStageData[] singleStageDatas;
 
-        [SerializeField] private PlayerStatus playerStatus;
+        private int curStageIndex;
 
         [SerializeField] private GameObject cloud;
         [SerializeField] private RectTransform cloudRectTransform;
@@ -31,18 +30,18 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         [SerializeField] private Vector2 targetPosition;
         private bool cloudMove;
 
-        [SerializeField] private int curStageIndex;
-
         [SerializeField] private Situaition_MainStage_Exit situaition_MainStage_Exit;
         [SerializeField] private GameObject exitScriptGameObject;
         [SerializeField] private GameObject lastStageObject;
 
+        [SerializeField] private Image backGroundImage;
+
         [SerializeField] private Text stageNum;
 
-        private bool finish, tempFlag;
-        private bool stageisChanging;
+        private bool finish;
 
-        public bool die;
+        public bool IsDie { get; private set; }
+
         private bool cloudAppear;
 
 
@@ -51,13 +50,18 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         {
             stageNum.text = "1";
 
-            playerStatus.moveChance = singleStageDatas[curStageIndex].maxMoveChance;
-
-            playerMovement.stageData = singleStageDatas[curStageIndex];
+            //playerStatus.MoveChance = singleStageDatas[curStageIndex].maxMoveChance;
+            //playerMovement.StageData = singleStageDatas[curStageIndex];
+            //playerMovement.WallPositionManager = singleStageDatas[curStageIndex].wallPositionManager;
+            //playerMovement.RockPositionManager = singleStageDatas[curStageIndex].rockPositionManager;
+        }
+        public void Start()
+        {
+            GoNextStage();
         }
         public void Update()
         {
-            if (finish == false && die == false)
+            if (finish == false && IsDie == false)
             {
                 if (cloudMove)
                 {
@@ -69,8 +73,6 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                         cloudMove = false;
 
                         cloudRectTransform.anchoredPosition = basePosition;
-
-                        stageisChanging = false;
                     }
                 }
                 else
@@ -79,9 +81,10 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     bool flag = false;
                     foreach (var statue in singleStageDatas[curStageIndex].statueManagers)
                     {
-                        if (!statue.active)
+                        if (!statue.Active)
                         {
                             flag = true;
+                            
                             break;
                         }
                     }
@@ -89,14 +92,10 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     //  Go to next stage
                     if (!flag)
                     {
-                        stageisChanging = true;
-
                         cloud.SetActive(true);
-                        cloudMove = true;
-
-                        //  Implement stage speecific calculations
-
+                        
                         curStageIndex++;
+                        cloudMove = true;
 
                         Invoke("GoNextStage", stageChangeInvokeTime);
 
@@ -113,7 +112,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     }
                 }
             }
-            else if(finish && tempFlag == false)
+            else if(finish)
             {
                 cloudRectTransform.anchoredPosition = Vector3.MoveTowards(cloudRectTransform.anchoredPosition, targetPosition, Time.deltaTime * cloudSpeed);
 
@@ -123,17 +122,15 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     cloudMove = false;
 
                     cloudRectTransform.anchoredPosition = basePosition;
-
-                    tempFlag = true;
                 }
             }
 
-            if (playerStatus.moveChance <= 0 && cloudMove == false)
+            if (playerStatus.MoveChance <= 0 && cloudMove == false)
             {
                 Invoke("Temp", 1.0f);
             }
 
-            if (die)
+            if (IsDie && !cloudMove)
             {
                 if(cloudAppear == false)
                 {
@@ -181,37 +178,43 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                         };
 
                         cloudAppear = false;
-                        die = false;
+                        IsDie = false;
                     }
                 }
-                
+            }
+            else
+            {
+                IsDie = false;
             }
         }
 
         private void GoNextStage()
         {
-            playerMovement.playerPosition = singleStageDatas[curStageIndex].startPosition;
-            playerMovement.playerPosition.x -= singleStageDatas[curStageIndex].offset.x;
-            playerMovement.playerPosition.y -= singleStageDatas[curStageIndex].offset.y;
+            playerMovement.PlayerPosition = singleStageDatas[curStageIndex].startPosition;
+            playerMovement.PlayerPosition = new Vector2Int()
+            {
+                x = playerMovement.PlayerPosition.x - singleStageDatas[curStageIndex].offset.x,
+                y = playerMovement.PlayerPosition.y - singleStageDatas[curStageIndex].offset.y
+            };
 
             playerTranstorm.position = singleStageDatas[curStageIndex].StartPosition_Real;
 
-            playerMovement.rockPositionManager = singleStageDatas[curStageIndex].rockPositionManager;
-            playerMovement.wallPositionManager = singleStageDatas[curStageIndex].wallPositionManager;
+            playerMovement.RockPositionManager = singleStageDatas[curStageIndex].rockPositionManager;
+            playerMovement.WallPositionManager = singleStageDatas[curStageIndex].wallPositionManager;
 
-            playerStatus.moveChance = singleStageDatas[curStageIndex].maxMoveChance;
+            playerStatus.MoveChance = singleStageDatas[curStageIndex].maxMoveChance;
             playerStatus.UpdateMoveChance();
 
-            playerMovement.stageData = singleStageDatas[curStageIndex];
+            playerMovement.StageData = singleStageDatas[curStageIndex];
 
-            playerMovement.singleTubeManagers = singleStageDatas[curStageIndex].singleTubeManagers;
+            playerMovement.SingleTubeManagers = singleStageDatas[curStageIndex].singleTubeManagers;
 
             stageNum.text = (curStageIndex + 1).ToString();
 
             foreach (var temp in singleStageDatas[curStageIndex].statueManagers)
             {
-                temp.active = false;
-                temp.light2D.enabled = false;
+                temp.Active = false;
+                temp.Light2D.enabled = false;
             }
         }
         private void GoLastStage()
@@ -226,20 +229,23 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
         public void Restart()
         {
-            die = true;
+            IsDie = true;
 
             Invoke("ResetAll", 0.5f);   
         }
         private void ResetAll()
         {
             // Restart
-            playerMovement.playerPosition = singleStageDatas[curStageIndex].startPosition;
-            playerMovement.playerPosition.x -= singleStageDatas[curStageIndex].offset.x;
-            playerMovement.playerPosition.y -= singleStageDatas[curStageIndex].offset.y;
+            playerMovement.PlayerPosition = singleStageDatas[curStageIndex].startPosition;
+            playerMovement.PlayerPosition = new Vector2Int()
+            {
+                x = playerMovement.PlayerPosition.x - singleStageDatas[curStageIndex].offset.x,
+                y = playerMovement.PlayerPosition.y - singleStageDatas[curStageIndex].offset.y
+            };
 
             playerTranstorm.position = singleStageDatas[curStageIndex].StartPosition_Real;
 
-            playerStatus.moveChance = singleStageDatas[curStageIndex].maxMoveChance;
+            playerStatus.MoveChance = singleStageDatas[curStageIndex].maxMoveChance;
             playerStatus.UpdateMoveChance();
 
             // reset the objects positions

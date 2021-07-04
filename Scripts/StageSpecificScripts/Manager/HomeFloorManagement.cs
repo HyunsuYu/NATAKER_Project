@@ -5,7 +5,7 @@ using Assets.Scripts.StageSpecificScripts.Manager;
 
 
 
-namespace NATAKER_DLL.StageSpecific.Home.Manager
+namespace Assets.Scripts.StageSpecificScripts.Manager
 
 {
     public enum FloorMoveDirection : byte
@@ -94,7 +94,7 @@ namespace NATAKER_DLL.StageSpecific.Home.Manager
                 {
                     case 0:
                         player.WallPositionManager = floor_0_wallManager;
-                        player.totalDoorManager = floor_0_totalDoorManager;
+                        player.TotalDoorManager = floor_0_totalDoorManager;
 
                         floorEnterManager.Floor_1_to_0_enter.Enter = false;
 
@@ -103,7 +103,7 @@ namespace NATAKER_DLL.StageSpecific.Home.Manager
 
                     case 1:
                         player.WallPositionManager = floor_1_wallManager;
-                        player.totalDoorManager = floor_1_totalDoorManager;
+                        player.TotalDoorManager = floor_1_totalDoorManager;
 
                         if (floorEnterManager.Floor_0_to_1_enter.Enter)
                         {
@@ -121,7 +121,7 @@ namespace NATAKER_DLL.StageSpecific.Home.Manager
 
                     case 2:
                         player.WallPositionManager = floor_2_wallManager;
-                        player.totalDoorManager = floor_2_totalDoorManager;
+                        player.TotalDoorManager = floor_2_totalDoorManager;
 
                         floorEnterManager.Floor_1_to_2_enter.Enter = false;
 

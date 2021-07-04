@@ -12,7 +12,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private Scrollbar scrollbar;
 
-        public bool optionIsActive;
+        public bool OptionIsActive { get; set; }
 
         [SerializeField] private SoundVolumeManager soundVolumeManager;
 
@@ -26,25 +26,26 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
             if (soundVolumeManager != null)
             {
-                soundVolumeManager.scrollbar = scrollbar;
+                soundVolumeManager.SoundScrollbar = scrollbar;
 
-                scrollbar.value = soundVolumeManager.value;
+                scrollbar.value = soundVolumeManager.Value;
                 SoundChange();
             }
         }
         public void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Escape) && optionIsActive == false)
+            if(Input.GetKeyDown(KeyCode.Escape) && OptionIsActive == false)
             {
                 optionPanel.SetActive(true);
 
-                optionIsActive = true;
+                OptionIsActive = true;
             }
-            else if(Input.GetKeyDown(KeyCode.Escape) && optionIsActive == true)
+            else if(Input.GetKeyDown(KeyCode.Escape) && OptionIsActive == true)
             {
                 OptionPanelOff();
             }
         }
+
         public void GameQuit()
         {
             Application.Quit();
@@ -57,7 +58,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
         {
             optionPanel.SetActive(false);
 
-            optionIsActive = false;
+            OptionIsActive = false;
         }
     }
 }

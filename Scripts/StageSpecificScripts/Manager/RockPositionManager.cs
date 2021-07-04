@@ -13,14 +13,14 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
         [SerializeField] private SingleStageData stageData;
 
-        public RockMovement[] rockMovements;
+        public RockMovement[] RockMovements { get; private set; }
 
 
 
         public void Awake()
         {
             rockPositions = new Vector2Int[rockGameObjects.Length];
-            rockMovements = new RockMovement[rockGameObjects.Length];
+            RockMovements = new RockMovement[rockGameObjects.Length];
 
             for (int index = 0; index < rockGameObjects.Length; index++)
             {
@@ -32,9 +32,9 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     y = (int)position.y - stageData.offset.y
                 };
 
-                rockMovements[index] = rockGameObjects[index].GetComponent<RockMovement>();
-                rockMovements[index].RockPosition = rockPositions[index];
-                rockMovements[index].Index = index;
+                RockMovements[index] = rockGameObjects[index].GetComponent<RockMovement>();
+                RockMovements[index].RockPositoon = rockPositions[index];
+                RockMovements[index].Index = index;
             }
         }
 

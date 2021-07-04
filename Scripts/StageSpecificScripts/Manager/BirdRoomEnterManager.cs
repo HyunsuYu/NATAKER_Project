@@ -22,25 +22,26 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
         private Vector2Int prevPosition;
 
-        public bool flag, checkStart;
+        public bool Flag { get; private set; }
+        public bool CheckStart { get; private set; }
 
 
 
         public void Update()
         {
-            if(flag == false)
+            if(Flag == false)
             {
                 if(curIndex == 0 && playerMovement.PlayerPosition == basePosition)
                 {
-                    checkStart = true;
+                    CheckStart = true;
                 }
 
-                if(checkStart)
+                if(CheckStart)
                 {
                     if (playerMovement.Kicking)
                     {
                         curIndex = 0;
-                        checkStart = false;
+                        CheckStart = false;
                     }
                     else if (prevPosition != playerMovement.PlayerPosition && curIndex < password.Length)
                     {
@@ -51,7 +52,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                         else
                         {
                             curIndex = 0;
-                            checkStart = false;
+                            CheckStart = false;
                         }
 
                         prevPosition = playerMovement.PlayerPosition;
@@ -61,12 +62,12 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
             if(curIndex == password.Length)
             {
-                flag = true;
+                Flag = true;
 
                 wallPositionManager.WallPosition[wallPosition.y - wallPositionManager.Origin.y, wallPosition.x - wallPositionManager.Origin.x] = true;
             }
 
-            if(flag)
+            if(Flag)
             {
                 float tempA = renderers[0].color.a;
 

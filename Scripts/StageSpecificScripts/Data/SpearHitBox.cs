@@ -8,7 +8,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
 {
     public sealed class SpearHitBox : MonoBehaviour
     {
-        [SerializeField] PlayerStatus playerStatus;
+        [SerializeField] private PlayerStatus playerStatus;
 
 
 
@@ -16,7 +16,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
         {
             if(other.tag == "Player")
             {
-                playerStatus.moveChance -= 3;
+                playerStatus.MoveChance -= 3;
                 playerStatus.UpdateMoveChance();
             }
         }

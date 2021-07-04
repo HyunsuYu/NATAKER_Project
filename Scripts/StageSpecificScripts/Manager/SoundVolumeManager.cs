@@ -7,20 +7,25 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 {
     public sealed class SoundVolumeManager : MonoBehaviour
     {
-        public float value;
-        public Scrollbar scrollbar;
+        public float Value { get; private set; }
+        [SerializeField] private Scrollbar scrollbar;
 
 
 
         public void Awake()
         {
-            value = 0.5f;
+            Value = 0.5f;
 
             DontDestroyOnLoad(this.gameObject);
         }
         public void FixedUpdate()
         {
-            value = scrollbar.value;
+            Value = scrollbar.value;
+        }
+
+        public Scrollbar SoundScrollbar
+        {
+            set => scrollbar = value;
         }
     }
 }

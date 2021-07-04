@@ -49,7 +49,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
             }
             foreach (var temp in arrowBlockManagers)
             {
-                temp.arrowCount = 3;
+                temp.ArrowCount = 3;
             }
 
             for (int index = 0; index < rockBasePositions.Length; index++)
@@ -59,7 +59,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
                     x = (int)rockBasePositions[index].x - stageData.offset.x,
                     y = (int)rockBasePositions[index].y - stageData.offset.y
                 };
-                rockPositionManager.rockMovements[index].RockPosition = rockPositionManager.RockPositions[index];
+                rockPositionManager.RockMovements[index].RockPositoon = rockPositionManager.RockPositions[index];
             }
             for(int index = 0; index < rockBasePositions.Length; index++)
             {
@@ -68,11 +68,11 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
             foreach(var temp in singleStageData.statueManagers)
             {
-                temp.active = false;
-                temp.light2D.enabled = false;
+                temp.Active = false;
+                temp.Light2D.enabled = false;
             }
 
-            optionManager.optionIsActive = false;
+            optionManager.OptionIsActive = false;
             panel.SetActive(false);
         }
     }

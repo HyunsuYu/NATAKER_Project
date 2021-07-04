@@ -11,7 +11,7 @@ namespace Assets.Scripts.StageSpecificScripts.Manager
 
         [SerializeField] private Tilemap tilemap;
         [SerializeField] private Vector2Int origin;
-        public Vector2Int mapSize;
+        private Vector2Int mapSize;
 
 
 

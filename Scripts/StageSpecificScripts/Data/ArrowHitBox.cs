@@ -9,7 +9,7 @@ namespace Assets.Scripts.StageSpecificScripts.Data
     public sealed class ArrowHitBox : MonoBehaviour
     {
         [SerializeField] private PlayerStatus playerStatus;
-        public bool collision;
+        public bool Collision { get; set; }
 
 
 
@@ -18,12 +18,12 @@ namespace Assets.Scripts.StageSpecificScripts.Data
             switch(other.tag)
             {
                 case "Player":
-                    playerStatus.moveChance -= 3;
+                    playerStatus.MoveChance -= 3;
                     playerStatus.UpdateMoveChance();
                     break;
 
                 case "Rock":
-                    collision = true;
+                    Collision = true;
                     break;
             }
         }
